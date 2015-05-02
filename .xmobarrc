@@ -1,0 +1,32 @@
+-- -*- mode:haskell -*-
+Config { font = "xft:Ricty-10:bold"
+       , bgColor = "#171618"
+       , fgColor = "grey"
+       , borderColor = "black"
+       , border = TopB
+       , position = TopW L 90
+       , allDesktops = True
+       , lowerOnStart = False
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "<fc=#ee9a00>%StdinReader%</fc> }{ | %cpu% %memory% %wlan0% %wlan0wi% | %default:Master%Br: %Brightness%/15 %battery% <fc=#ee9a00>%date%</fc>"
+       , commands = [ Run Com "uname" ["-s","-r"] "uname" 36000
+                    , Run Network "wlan0" ["-L","0","-H","32","--normal","green","--high","red"] 60
+                    , Run Wireless "wlan0" ["-t", "ESSID: <essid>"] 60
+                    , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 60
+                    , Run Memory ["-t","Mem: <usedratio>%"] 360
+                    , Run Battery ["-t", "Bat: <acstatus> <left>% <timeleft>"
+                                   , "-L", "10", "-H", "80"
+                                   , "-l", "red", "-n", "darkturquoise", "-h", "green"
+                                   , "--"
+                                   , "-O", "<fc=green>+</fc>", "-o", "<fc=red>-</fc>"
+                                   , "-f", "status"
+                                  ] 360
+                    , Run Com "cat" ["/sys/class/backlight/acpi_video0/brightness"] "Brightness" 10
+                    -- , Run Brightness ["-t", "-D", "/sys/module/thinkpad_acpi/parameters/brightness_mode", "-C", "brightness"] 60
+                    -- , Run Kbd [("us(dvorak)", "DV"), ("us", "US")]
+                    , Run Volume "default" "Master" [] 10
+                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run StdinReader
+                    ]
+	    }

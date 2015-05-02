@@ -1,0 +1,116 @@
+! Xcursor.theme: DMZ-white
+Xft.dpi: 96
+Xft.antialias:      true
+Xft.hinting:      true
+
+remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Control_L = Control_L
+keysym Caps_Lock = Control_L
+add Lock = Caps_Lock
+add Control = Control_L
+
+Xterm settings
+
+XTerm*dynamicColors:      true
+XTerm*toolBar:            false
+XTerm*utf8:              1
+xterm*font: 7x13
+xterm*faceName: Inconsolata:size=12:antialias=true
+xterm*faceSize:          12
+xterm*geometry:          120x40
+xterm*boldMode:          true
+xterm*cutNewline:        false
+xterm*on4Clicks:         group
+xterm*on5Clicks:         page
+xterm*internalBorder:    1
+xterm*metaSendsEscape:   true
+xterm*colorBD:           #ffffff
+xterm*colorBDMode:       true
+xterm*cursorBlink:       false
+xterm*cursorColor:       #ff9900
+xterm*veryBoldColors:    14
+xterm*loginShell:        true
+xterm*charClass:         33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+xterm*jumpScroll:        true
+xterm*multiScroll:       true
+xterm*saveLines:         512
+xterm*boldMode: false
+xterm*termName: xterm-color
+
+
+urxvt*utf8 : 1
+urxvt*scrollBar: false
+urxvt*depth: 32
+urxvt*background: rgba:0026/0030/0027/7000
+urxvt*foreground: rgba:eecc/eecc/eecc/cc00
+urxvt.font: \
+    xft:Inconsolatakao:Regular:size=11,\
+    xft:Symbola:size=8,\
+urxvt.boldfont: \
+    xft:Inconsolatakao:Bold:size=11,\
+urxvt.letterSpace: -1
+urxvt.lineSpace: -0.016
+urxvt.colorUL: #4682B4
+urxvt*termName: xterm-color
+urxvt*preeditType: OnTheSpot
+urxvt*perl-ext: xim-onthespot
+urxvt*underlineColor: yellow
+urxvt*cursorUnderline: true
+URxvt.inputMethod: fcitx
+
+urxvt.perl-ext-common: default,font-size,matcher,url-select,keyboard-select,clipboard,tabbed
+urxvt.keysym.C-Up:     perl:font-size:increase
+urxvt.keysym.C-Down:   perl:font-size:decrease
+urxvt.keysym.C-Delete: perl:matcher:last
+urxvt.keysym.M-Delete: perl:matcher:list
+urxvt.matcher.button: 1
+urxvt.url-select.launcher: /usr/bin/xdg-open
+urxvt.url-launcher: /usr/bin/firefox-bin
+urxvt.url-select.underline: true
+urxvt.keysym.M-c:   perl:clipboard:copy
+urxvt.keysym.M-v:   perl:clipboard:paste
+
+! black
+urxvt*color:    #161817
+urxvt*color8:   #5C585C
+! red
+urxvt*color1:   #F54E00
+urxvt*color9:   #FF0000
+! green
+urxvt*color2:   #35DD5F
+urxvt*color10:  #00EF01
+! yellow
+urxvt*color3:   #C4DE50
+urxvt*color11:  #DDFF00
+! blue
+urxvt*color4:   #677BE5
+urxvt*color12:  #6154F5
+! magenta
+urxvt*color5:   #EE69FA
+urxvt*color13:  #FF00DD
+! cyan
+urxvt*color6:   #6CF7EB
+urxvt*color14:  #07B099
+! ! white
+urxvt*color7:   #D6D6D6
+urxvt*color15:  #FFFFFF
+
+xmessage*form.okay.shapeStyle:          rectangle
+xmessage*form.okay.background:          IndianRed
+xmessage*form.okay.foreground:          rgb:e/b/b
+xmessage*message*background:            ivory3
+xmessage*background:                    gray85
+xmessage*foreground:                    gray15
+xmessage*Scrollbar.width:               1
+xmessage*Scrollbar.borderWidth:         0
+xmessage*Text.?.cursorColor:            rgb:d/5/5
+xmessage*Text.borderColor:              gray65
+xmessage*Text*background:               gray95
+xmessage*Command.highlightThickness:    1
+xmessage*Command.internalWidth:         5
+xmessage*Command.internalHeight:        3
+xmessage*Command.borderColor:           gray40
+xmessage*Command.shapeStyle:            Rectangle
+xmessage*Command.background:            gray80
+xmessage*font:                          -*-clean-*-*-*-*-*-*-*-*-*-*-iso8859-2
