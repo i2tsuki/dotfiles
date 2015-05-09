@@ -1,12 +1,11 @@
 #!/bin/sh
-. ${HOME}/.texmf/texmf.sh
-
+# . ${HOME}/.texmf/texmf.sh
 
 eval "$(dbus-launch --sh-syntax --exit-with-session)"
 eval "$(gpg-agent)"
 eval "$(ssh-agent)"
 
-export PATH=${PATH}:/opt/bin:${HOME}/repo/bin:${HOME}/.cabal/bin:${HOME}/.local/bin
+export PATH=${PATH}:/opt/bin:${HOME}/.cabal/bin:${HOME}/.local/bin:${HOME}/.cask/bin
 
 export XDG_DATA_HOME=$HOME/.cache
 export XDG_CACHE_HOME=$HOME/.cache
@@ -17,7 +16,6 @@ export LANG='ja_JP.UTF-8'
 export LC_ALL='ja_JP.UTF-8'
 
 export GTK2_RC_FILES=${HOME}/.gtkrc-2.0
-export WINEPREFIX=${HOME}/.wine
 
 # eval $(gnome-keyring-daemon -sd)
 
@@ -25,4 +23,3 @@ export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
 exec fcitx > /dev/null &
-exec xmodmap ${HOME}/.xmodmaprc &

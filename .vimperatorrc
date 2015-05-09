@@ -1,0 +1,58 @@
+set titlestring=Firefox
+set visualbell
+set verbose=9
+set maxitems=13
+
+colorscheme sweets_snaka
+
+set focuscontent
+set hlsearch
+
+map B :bmarks!<Space>
+map e :eijiro<Space>
+
+let g:hintsio="io"
+let g:hintchars="HJKLASDFGYUIOPQWERTNMZXCVB"
+
+" command! -nargs=+ lazy autocmd VimperatorEnter .* <args>
+" lazy fmaps -u='mail\.google\.com/mail' c / j k n p o u e x s r a # [ ] ? gi gs gt gd ga gc
+" lazy fmaps -u='mail\.google\.com/mail/.*/[0-9a-f]+$' c / j,n k,p n,j p,k o u e x s r a # [ ] ? gi gs gt gd ga gc
+
+javascript <<EOM
+
+liberator.globalVariables.proxy_settings = [
+    {
+	conf_name: 'disable',
+	conf_usage: 'direct connection',
+	settings: [
+            {label: 'type', param: 0}
+	]
+    },
+    {
+	conf_name: 'localhost8080',
+	conf_usage: 'use kamiya proxy',
+	settings: [
+            {label: 'type', param: 1},
+            {label: 'http', param: '127.0.0.1'},
+            {label: 'http_port', param: 8080},
+	    {label: 'ssl', param: '127.0.0.1'},
+	    {label: 'ssl_port', param: 8080},
+            {label: 'socks', param: ''},
+            {label: 'socks_port', param: 0},
+	]
+    },
+    {
+	conf_name: 'tor',
+	conf_usage: 'use tor proxy',
+	settings: [
+            {label: 'type', param: 1},
+            {label: 'http', param: ''},
+            {label: 'http_port', param: 0},
+	    {label: 'ssl', param: ''},
+	    {label: 'ssl_port', param: 0},
+            {label: 'socks', param: '127.0.0.1'},
+            {label: 'socks_port', param: 9050},
+	]
+    }
+];
+EOM

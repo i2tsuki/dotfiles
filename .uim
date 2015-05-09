@@ -1,0 +1,7 @@
+;; スペースは常に半角
+(require "japanese.scm")
+(define ja-direct-rule
+ (append '(
+           (" " " ")
+           )
+         ja-direct-rule))

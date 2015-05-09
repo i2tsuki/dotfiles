@@ -1,14 +1,11 @@
 own_window_type conky
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 own_window_transparent yes
-# own_window_argb_visual yes
-# own_window_argb_value 0
 
 use_xft yes
 xftfont MigMix 1M:size=8
 override_utf8_locale yes
 background no
-# default_color c0c0c0
 default_color green
 default_shade_color 003E3F
 update_interval 1
@@ -28,33 +25,28 @@ alignment bottom_right
 max_user_text 32768
 text_buffer_size 1024
 gap_x 15
-# gap_y 33
 gap_y 13
 TEXT
-${color magenta}${font Bitstream Vera Sans:style=Regular:pixelsize=13}System${font} ${hr 1}${color}
+${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=13}System${font} ${hr 1}${color}
 CPU ${alignr}${freq} MHz
 # ${cpugraph 20,360 a0a0a0 ffffff -t}
 ${cpugraph 20,360 green -t}
 RAM    $mem / $memmax ($memperc%) ${goto 183} Swap ${alignr}$swap / $swapmax ($swapperc%)
 ${membar 4, 177} ${goto 183} ${swapbar 4, 177}
 Network up${upspeed} ${goto 183} down${downspeed}
-# ${upspeedgraph eth0 10,177 a0a0a0 ffffff -t} ${goto 183} ${downspeedgraph eth0 10,177 a0a0a0 ffffff -t}
 ${upspeedgraph wlan0 10,177 green -t} ${goto 183} ${downspeedgraph wlan0 10,177 green -t}
 DiskIO wrt${diskio_write} ${goto 183} read${diskio_read}
-# ${diskiograph_write 10,177 a0a0a0 ffffff -t} ${goto 183} ${diskiograph_read 10,177 a0a0a0 ffffff -t}
 ${diskiograph_write 10,177 green -t} ${goto 183} ${diskiograph_read 10,177 green -t}
 Highest CPU% MEM% ${goto 183} Highest MEM $alignr CPU% MEM%
 ${top name 1} ${top cpu 1} ${top mem 1} ${goto 183} ${top_mem name 1} ${top_mem cpu 1} ${top_mem mem 1}
 ${top name 2} ${top cpu 2} ${top mem 2} ${goto 183} ${top_mem name 2} ${top_mem cpu 2} ${top_mem mem 2}
 ${top name 3} ${top cpu 3} ${top mem 3} ${goto 183} ${top_mem name 3} ${top_mem cpu 3} ${top_mem mem 3}
-${color magenta}${font Bitstream Vera Sans:style=Regular:pixelsize=13}Hwmon${font} ${hr 1}${color}
+${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=13}Hwmon${font} ${hr 1}${color}
 CPU ${alignr}${hwmon temp 1} celsius
 # HDD ${alignr}${hddtemp /dev/sda}
 Chip ${alignr}${ibm_fan}rpm
-${color magenta}${font Bitstream Vera Sans:style=Regular:pixelsize=13}Mpd daemon${font} ${hr 1}${color}
+${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=13}Mpd daemon${font} ${hr 1}${color}
 ${image /tmp/mpdart.png -p 4,296 -s 172x172 -n} \
-# $if_mpd_playing ${exec mpdcover } $endif \
-# ${image /tmp/mpdart.png -p 4,330 -s 172x172 -n} $if_mpd_playing ${execpi 5 mpccover} $endif
 ${goto 180} $mpd_artist
 ${goto 180} $mpd_title
 ${goto 180} $mpd_album
@@ -66,7 +58,7 @@ ${goto 180} mpd_repeat: ${mpd_repeat}
 
 ${goto 180} mpd_status: $mpd_status
 ${goto 180} ${mpd_bar 4,180}
-${color magenta}${font Bitstream Vera Sans:style=Regular:pixelsize=13}Agenda${font} ${hr 1}${color}
+${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=13}Agenda${font} ${hr 1}${color}
 ono-ka@klab.com: \
 ${execpi 1800 /usr/bin/gcalcli agenda $(date +"%Y-%m-%dT%H:%M" ) $(date --date "today next day next day next day" +"%Y-%m-%d") --conky --military --color_date green --color_owner green --calendar "ono-ka@klab.com" | sed "s/）/)/" | sed "s/＠/@/"} # ${execpi 600 /usr/bin/gcalcli remind 20 --calendar="ono-ka@klab.com"}
 personal:

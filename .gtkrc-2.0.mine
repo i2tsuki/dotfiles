@@ -1,0 +1,7 @@
+include "/usr/share/themes/Emacs/gtk-2.0-key/gtkrc"
+
+gtk-menu-bar-accel=""
+gtk-can-change-accels=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="medium"
+gtk-xft-rgba="rgb"

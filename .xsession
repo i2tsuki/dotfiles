@@ -1,19 +1,16 @@
 #!/bin/sh
 exec xbacklight -set 50 &
-exec ck-launch-session &
 
 exec nitrogen --restore &
 exec xcompmgr -n &
 
-
-exec tudor-volumed &
+# exec tudor-volumed &
 exec blueman-applet &
 exec dropbox &
-# exec dhcpcd-gtk &
-# exec tracker-control -s &
-exec trayer-srgc &
+
+exec trayer-srg.custom &
 exec conky &
 
-exec xmodmap ${HOME}/.xmodmaprc &
+# exec xmodmap ${HOME}/.Xmodmaprc &
 
 exec /etc/X11/Sessions/xmonad

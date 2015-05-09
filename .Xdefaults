@@ -45,10 +45,10 @@ urxvt*depth: 32
 urxvt*background: rgba:0026/0030/0027/7000
 urxvt*foreground: rgba:eecc/eecc/eecc/cc00
 urxvt.font: \
-    xft:Inconsolatakao:Regular:size=11,\
+    xft:Inconsolatakao:Regular:size=10,\
     xft:Symbola:size=8,\
 urxvt.boldfont: \
-    xft:Inconsolatakao:Bold:size=11,\
+    xft:Inconsolatakao:Bold:size=10,\
 urxvt.letterSpace: -1
 urxvt.lineSpace: -0.016
 urxvt.colorUL: #4682B4
