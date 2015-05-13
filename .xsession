@@ -4,9 +4,10 @@ exec xbacklight -set 50 &
 exec nitrogen --restore &
 exec xcompmgr -n &
 
-# exec tudor-volumed &
+exec tudor-volumed &
 exec blueman-applet &
 exec dropbox &
+exec ${HOME}/.local/bin/mpdcover &
 
 exec trayer-srg.custom &
 exec conky &
