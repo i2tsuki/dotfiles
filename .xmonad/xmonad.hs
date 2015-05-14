@@ -34,7 +34,9 @@ myManageHookShift = composeAll
     , className =? "Nemo"                   --> viewShift "4"
     , className =? "Thunar"                 --> viewShift "4"
     , className =? "google-chrome"          --> viewShift "5"
+    , className =? "Google-chrome-stable"   --> viewShift "5"
     , className =? "Wine"                   --> viewShift "5"
+    , className =? "xfreerdp"               --> viewShift "5"
     , className =? "Evince"                 --> viewShift "6"
     , className =? "Acroread"               --> viewShift "6"
     , fmap ("Acroread" `isPrefixOf`) className  --> viewShift "6"
@@ -54,6 +56,7 @@ myManageHookShift = composeAll
     , className =? "Keepassx"               --> viewShift "8"
     , className =? "Vmplayer"               --> viewShift "9"
     , className =? "VirtualBox"             --> viewShift "9"
+    , className =? "xfreerdp"               --> doFloat
     , className =? "Google-chrome-beta"     --> doFloat
     , className =? "Xfrun4"                 --> doFloat
     , className =? "Player"                 --> doFloat
