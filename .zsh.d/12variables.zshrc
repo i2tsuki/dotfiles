@@ -1,4 +1,5 @@
 #!/bin/zsh
+PATH=${PATH}:~/.local/bin/
 PATH=${PATH}:~/.cask/bin/
 
 PROMPT="%(?.%{${fg[magenta]}%}.%{${fg[red]}%})%B%n%b%f@%F{magenta}%B%m%u%f:%F{green}%d%{${reset_color}%}%# "
