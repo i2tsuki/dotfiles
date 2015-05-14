@@ -1,0 +1,3 @@
+ACTION!="add|change", GOTO="u2f_end"
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1050", ATTRS{idProduct}=="0410", MODE="0660", GROUP="plugdev"
+LABEL="u2f_end"
