@@ -15,7 +15,3 @@ install:
 	do \
 	    ln -sfv $$(readlink -f $$file) ${HOME}/; \
 	done
-
-.PHONY: test
-test:
-	echo ${EXCLUDES}
