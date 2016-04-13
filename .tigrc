@@ -1,2 +1,9 @@
-bind status P !git push origin master
+bind status P !git push origin %(branch)
 bind status R !rm -iv %(file)
+bind status c !git commit
+bind status C !git checkout HEAD %(file)
+
+bind main d !?git branch -d %(branch)
+bind main p !git pull
+bind main P !git push origin %(branch)
+
