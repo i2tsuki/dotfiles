@@ -1,13 +1,14 @@
 set noai
 set noexpandtab
 
+set list
+set listchars=tab:>\ 
+
 syntax on
 
 filetype plugin on
 filetype indent on
 filetype on
-
-:set list
 
 map <C-g> :Gtags 
 map <C-h> :Gtags -f %<CR>
