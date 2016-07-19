@@ -13,14 +13,15 @@ add Control = Control_L
 Xterm settings
 
 XTerm*dynamicColors:      true
-XTerm*toolBar:            false
-XTerm*utf8:              1
-xterm*font: 7x13
-xterm*faceName: Inconsolata:size=12:antialias=true
-xterm*faceSize:          12
+XTerm*toolBar: false
+xterm*locale: true
+! XTerm*utf8: 1
+! xterm*font: 7x13
+xterm*faceName: 源ノ角ゴシック Code JP Regular:style=Regular:size=8
+xterm*faceSize:          10
 xterm*geometry:          120x40
 xterm*boldMode:          true
-xterm*cutNewline:        false
+! xterm*cutNewline:        false
 xterm*on4Clicks:         group
 xterm*on5Clicks:         page
 xterm*internalBorder:    1
@@ -38,6 +39,10 @@ xterm*saveLines:         512
 xterm*boldMode: false
 xterm*termName: xterm-color
 
+xterm*bellIsUrgent: true
+xterm*scaleHeight: 1.00
+xterm*borderWidth: 1
+
 
 urxvt*utf8 : 1
 urxvt*scrollBar: false
@@ -45,19 +50,25 @@ urxvt*depth: 32
 urxvt*background: rgba:0026/0030/0027/7000
 urxvt*foreground: rgba:eecc/eecc/eecc/cc00
 urxvt.font: \
-    xft:Inconsolatakao:Regular:size=10,\
-    xft:Symbola:size=8,\
+    xft:Inconsolata:style=Regular:size=10,antialias=true:hinting=light, \
+    xft:Ricty Diminished Discord:style=Regular:size=10,antialias=true:hinting=light, \
+    ! xft:Noto Emoji:style=Regular,pixelsize=10,antialias=true:hinting=light, \
+    xft:Symbola:Style=Regular:size=10 \
 urxvt.boldfont: \
-    xft:Inconsolatakao:Bold:size=10,\
-urxvt.letterSpace: -1
-urxvt.lineSpace: -0.016
-urxvt.colorUL: #4682B4
-urxvt*termName: xterm-color
+    xft:Inconsolata:style=Regular:size=10,antialias=true:hinting=light, \
+    xft:Ricty Diminished Discord:style=Bold:size=10,antialias=true:hinting=light, \
+    ! xft:Noto Emoji:style=Regular,size=10,antialias=true:hinting=light, \
+    xft:Symbola:Style=Regular:pixelsize=10 \
+urxvt.letterSpace: 1
+urxvt.lineSpace: 1.16
+urxvt.colorUL: #5
+urxvt*termName: linux
 urxvt*preeditType: OnTheSpot
 urxvt*perl-ext: xim-onthespot
 urxvt*underlineColor: yellow
 urxvt*cursorUnderline: true
-URxvt.inputMethod: fcitx
+urxvt.inputMethod: fcitx
+URxvt.visualBell: true  ```
 
 urxvt.perl-ext-common: default,font-size,matcher,url-select,keyboard-select,clipboard,tabbed
 urxvt.keysym.C-Up:     perl:font-size:increase
@@ -65,7 +76,8 @@ urxvt.keysym.C-Down:   perl:font-size:decrease
 urxvt.keysym.C-Delete: perl:matcher:last
 urxvt.keysym.M-Delete: perl:matcher:list
 urxvt.matcher.button: 1
-urxvt.url-select.launcher: /usr/bin/xdg-open
+! urxvt.url-select.launcher: /usr/bin/xdg-open
+urxvt.url-select.launcher: /usr/bin/firefox-bin
 urxvt.url-launcher: /usr/bin/firefox-bin
 urxvt.url-select.underline: true
 urxvt.keysym.M-c:   perl:clipboard:copy
