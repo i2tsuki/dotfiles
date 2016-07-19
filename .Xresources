@@ -4,15 +4,7 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
-xterm*termName: xterm-256color
-xterm*locale: true
-xterm*metaSendsEscape: true
 xterm*reverseVideo: off
-xterm*faceName: Inconsolatakao:size=10:antialias=true
-xterm*font: 6x11
-xterm*bellIsUrgent: true
-xterm*scaleHeight: 1.00
-xterm*borderWidth: 1
 
 urxvt.url-launcher: /usr/bin/firefox-bin -new-tab
 urxvt.matcher.button: 1
