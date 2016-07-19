@@ -5,7 +5,7 @@ eval "$(dbus-launch --sh-syntax --exit-with-session)"
 eval "$(gpg-agent)"
 eval "$(ssh-agent)"
 
-export PATH=${PATH}:/opt/bin:${HOME}/.cabal/bin:${HOME}/.local/bin:${HOME}/.cask/bin
+export PATH=${PATH}:/opt/bin:${HOME}/.cabal/bin:${HOME}/.local/bin:${HOME}/.cask/bin:${HOME}/.cargo/bin
 
 export XDG_DATA_HOME=$HOME/.cache
 export XDG_CACHE_HOME=$HOME/.cache
