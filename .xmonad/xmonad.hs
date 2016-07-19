@@ -31,22 +31,22 @@ myManageHookShift = composeAll
     , className =? "Emacs"                  --> viewShift "2"
     , className =? "Terminal"               --> viewShift "3"
     , className =? "URxvt"                  --> viewShift "3"
-    , className =? "Nemo"                   --> viewShift "4"
     , className =? "Thunar"                 --> viewShift "4"
     , className =? "google-chrome"          --> viewShift "5"
     , className =? "Google-chrome-stable"   --> viewShift "5"
     , className =? "Wine"                   --> viewShift "5"
-    , className =? "xfreerdp"               --> viewShift "5"
-    , className =? "Evince"                 --> viewShift "6"
+    , className =? "xfreerdp"               --> viewShift "6"
     , className =? "Acroread"               --> viewShift "6"
+    , className =? "Atrill"                 --> viewShift "6"
+    , className =? "Atom"                   --> viewShift "6"
     , fmap ("Acroread" `isPrefixOf`) className  --> viewShift "6"
     , fmap ("Gimp" `isPrefixOf`) className  --> viewShift "7"
     , fmap ("Pinta" `isPrefixOf`) className --> viewShift "7"
     , className =? "Dia"                    --> viewShift "7"
+    , className =? "Slack"                  --> viewShift "7"
     , className =? "sun-awt-X11-XFramePeer" --> doFloat
     , className =? "com-install4j-runtime-launcher-Launcher" --> doFloat
     , className =? "Inkscape"               --> viewShift "7"
-    , className =? "Deadbeef"               --> viewShift "7"
     , className =? "Makemkv"                --> viewShift "8"
     , className =? "mplayer2"               --> viewShift "8"
     , className =? "Audacious"              --> viewShift "8"
@@ -56,6 +56,8 @@ myManageHookShift = composeAll
     , className =? "Keepassx"               --> viewShift "8"
     , className =? "Vmplayer"               --> viewShift "9"
     , className =? "VirtualBox"             --> viewShift "9"
+    , className =? "rustytwit"              --> viewShift "9"
+    , className =? "Caprine"                --> viewShift "9"
     , className =? "xfreerdp"               --> doFloat
     , className =? "Google-chrome-beta"     --> doFloat
     , className =? "Xfrun4"                 --> doFloat
@@ -73,13 +75,9 @@ myWorkspaces = ["1","2","3","4","5","6","7","8","9"]
 
 myKeys =
     [ ("M-p", spawn "dmenu_run -fn Ricty-11:bold -nb black -nf orange -sb black -sf red")
-    , ("C-M4-p", spawn "dmenu_run -fn Inconsolata-12")
-    , ("C-M4-l", spawn "xtrlock")
+    , ("C-M4-l", spawn "xtrlock & xmodmap -e 'keycode 66 = Control_L NoSymbol Control_L'")
     , ("C-M4-h", spawn "sudo hibernate-ram & xtrlock")
-    , ("C-S-<Space>", spawn "killall ibus-daemon && ibus-daemon -d -x")
     , ("<XF86AudioNext>", spawn "mpc next")
-    -- , ((xF86XK_AudioNext), spawn "mpc prev")
-
     -- , ("M-S-n", do t <- findWorkspace getSortByIndex Next EmptyWS 1
     --                (windows . W.shift) t
     --               (windows . W.greedyView) t)
