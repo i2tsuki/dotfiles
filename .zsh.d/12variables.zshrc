@@ -6,5 +6,5 @@ PATH=${PATH}:~/node_modules/.bin/
 PROMPT="%(?.%{%F{magenta}%}.%{%F{red}%})%B%n%F{reset_color}@%(?.%{%F{magenta}%}.%{%F{red}%})%B%m%u%f:%F{green}%d%F{reset_color}%# "
 
 HISTFILE=~/.zsh_history
-HISTSIZE=700
-SAVEHIST=700
+HISTSIZE=1000
+SAVEHIST=1000
