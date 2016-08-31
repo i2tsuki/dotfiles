@@ -7,6 +7,9 @@ colorscheme sweets_snaka
 
 set focuscontent
 set hlsearch
+set noscrollbars
+set ssli=1
+set status=input,location,bookmark,history,tabcount,position
 
 map B :bmarks!<Space>
 map e :eijiro<Space>
