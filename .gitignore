@@ -1,9 +1,5 @@
 secrets/
 
-*.elc
-
-.emacs.d/
-.emacs.d/backup/
 .vimperator/info/
 
 .xmonad/xmonad.o
