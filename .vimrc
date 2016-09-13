@@ -10,6 +10,9 @@ filetype plugin on
 filetype indent on
 filetype on
 
+set backup
+set backupcopy=yes
+
 map <C-g> :Gtags 
 map <C-h> :Gtags -f %<CR>
 map <C-j> :GtagsCursor<CR>
