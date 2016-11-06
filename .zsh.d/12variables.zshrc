@@ -1,6 +1,7 @@
 #!/bin/zsh
 PATH=${PATH}:~/.local/bin/
 PATH=${PATH}:~/.cask/bin/
+PATH=${PATH}:~/.cabal/bin/
 PATH=${PATH}:~/node_modules/.bin/
 
 PROMPT="%(?.%{%F{magenta}%}.%{%F{red}%})%B%n%F{reset_color}@%(?.%{%F{magenta}%}.%{%F{red}%})%B%m%u%f:%F{green}%d%F{reset_color}%# "
