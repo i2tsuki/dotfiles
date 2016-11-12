@@ -33,6 +33,7 @@ myManageHookShift = composeAll
     , className =? "URxvt"                  --> viewShift "3"
     , className =? "Thunar"                 --> viewShift "4"
     , className =? "google-chrome"          --> viewShift "5"
+    , className =? "Google-chrome"          --> viewShift "5"
     , className =? "Google-chrome-stable"   --> viewShift "5"
     , className =? "Wine"                   --> viewShift "5"
     , className =? "xfreerdp"               --> viewShift "6"
