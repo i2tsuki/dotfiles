@@ -1,4 +1,4 @@
-;;; 20_htmlize - htmlize configure
+;;; 20_htmlize.el - htmlize configure
 
 ;;; Code:
 (autoload 'htmlize-buffer "htmlize" nil t)
