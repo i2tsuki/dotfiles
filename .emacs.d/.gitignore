@@ -1,0 +1,15 @@
+.cask/
+
+auto-install/
+auto-save-list/
+backup/
+dict/
+elpa/
+eshell/history
+games/
+url/
+
+tramp
+
+*.elc
+*.dat
