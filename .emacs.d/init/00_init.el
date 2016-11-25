@@ -12,6 +12,7 @@
 (toggle-scroll-bar nil)
 (setq mouse-wheel-follow-mouse nil)
 (show-paren-mode t)
+(defvar show-paren-style 'expression)
 (add-to-list 'default-frame-alist '(cursor-type . 'hbar))
 (setq completion-ignore-case t)
 (setq visible-bell t)
