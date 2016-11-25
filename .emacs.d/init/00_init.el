@@ -31,6 +31,8 @@
 (setq-default indicate-empty-lines t)
 (setq-default indicate-buffer-boundaries 'right)
 (auto-image-file-mode t)
+;; Backup behavior
+(setq backup-by-copying t)
 
 ;; Dired configure
 (put 'dired-find-alternate-file 'disabled nil)
