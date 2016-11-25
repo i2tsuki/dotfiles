@@ -1,0 +1,116 @@
+;; -*- coding:utf-8 mode:emacs-lisp -*-
+
+;; Package repository configure
+(source gnu)
+(source melpa)
+(source marmalade)
+
+;; ---
+;; Init
+(depends-on "init-loader")
+
+;; ---
+;; Documentation
+(depends-on "auctex")
+
+;; ---
+;; Auto completion
+(depends-on "auto-complete")
+(depends-on "auto-complete-clang")
+(depends-on "fuzzy")
+(depends-on "popup")
+;;(depends-on "pos-tip")
+(depends-on "company")
+(depends-on "company-quickhelp")
+
+;; ---
+;; Appearance
+(depends-on "color-theme")
+(depends-on "color-theme-github")
+
+(depends-on "smooth-scroll")
+(depends-on "smooth-scrolling")
+
+(depends-on "powerline")
+
+(depends-on "e2wm")
+;; (depends-on "e2wm-R")
+;; (depends-on "inlineR")
+(depends-on "e2wm-bookmark")
+;; (depends-on "e2wm-svg-clock")
+;; (depends-on "svg-clock")
+
+(depends-on "ess-R-data-view")
+
+(depends-on "tabbar")
+(depends-on "tabbar-ruler")
+
+;; Concurrent
+(depends-on "concurrent")
+
+;; ---
+;; Input Method
+(depends-on "ddskk")
+
+;; ---
+;; Utilities
+(depends-on "exec-path-from-shell")
+
+(depends-on "helm")
+(depends-on "helm-c-yasnippet")
+(depends-on "helm-migemo")
+
+(depends-on "undo-tree")
+(depends-on "stripe-buffer")
+(depends-on "htmlize")
+(depends-on "yasnippet")
+(depends-on "yascroll")
+(depends-on "zlc")
+
+;; mew
+(depends-on "mew")
+
+;; flycheck
+(depends-on "flycheck")
+(depends-on "flycheck-pos-tip")
+
+;; ----
+;; Documentation tool
+;; markdown-mode
+(depends-on "markdown-mode")
+
+;; org-mode
+(depends-on "org")
+(depends-on "org-bullets")
+(depends-on "org-toodledo")
+(depends-on "http-post-simple")
+;; (depends-on "ox-remark" :git "https://github.com/coldnew/org-remark.git" :branch "master")
+(depends-on "ox-qmd")
+
+;; Markup
+(depends-on "yaml-mode")
+(depends-on "toml-mode")
+
+;; ----
+;; Other
+(depends-on "dockerfile-mode")
+(depends-on "nginx-mode")
+
+;; ----
+;; Coding
+(depends-on "cperl-mode")
+
+(depends-on "elpy")
+
+(depends-on "go-mode")
+(depends-on "go-autocomplete")
+(depends-on "go-eldoc")
+
+(depends-on "groovy-mode")
+
+(depends-on "haskell-mode")
+(depends-on "ghc")
+
+(depends-on "php-mode")
+
+(depends-on "rust-mode")
