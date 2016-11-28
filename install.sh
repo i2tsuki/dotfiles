@@ -5,7 +5,9 @@ set -eu
 EXCLUDES="Makefile|LICENSE|install.sh|udev.rules|.git|.gitignore|^.$"
 
 # public
-for file in $(find . -maxdepth 1 -type f | egrep -v ${EXCLUDES})
+X11ONLY=""
+[ "$(uname)" = "Darwin" ] && X11ONLY=".Xresources|.Xmodmap|.xsession|.xinitrc|.xprofile"
+for file in $(find . -maxdepth 1 -type f | egrep -v ${EXCLUDES} | egrep -v ${X11ONLY})
 do
     ln -sfv $(readlink -f $file) ${HOME}/
 done
