@@ -9,5 +9,5 @@ alias grep="grep --color=always"
 alias pdflatex="pdfplatex"
 
 alias vi="/usr/bin/vim"
-alias ec="/usr/bin/emacsclient -n"
-alias ecc="/usr/bin/emacsclient -nw"
+alias ec="emacsclient -n"
+alias ecc="emacsclient -nw"
