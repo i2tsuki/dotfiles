@@ -58,7 +58,6 @@
 
 (depends-on "helm")
 (depends-on "helm-c-yasnippet")
-(depends-on "helm-migemo")
 
 (depends-on "undo-tree")
 (depends-on "stripe-buffer")
