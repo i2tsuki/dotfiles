@@ -37,3 +37,7 @@
 ;; Dired configure
 (put 'dired-find-alternate-file 'disabled nil)
 (setq dired-listing-switches "-alhgX")
+
+;; Reduction 'yes/no' to 'y/n'
+(fset 'yes-or-no-p 'y-or-n-p)
+
