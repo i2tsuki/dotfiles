@@ -21,6 +21,3 @@
 ;; Display bullet for org
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-
-;; Org for remarkjs
-(require 'org-remark)
