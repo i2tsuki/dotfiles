@@ -2,7 +2,7 @@
 
 ;;; Code:
 (cd "~/")
-(setq visible-bell t)
+(setq visible-bell nil)
 (add-to-list 'default-frame-alist '(alpha . 70))
 (column-number-mode 1)
 (tool-bar-mode -1)
@@ -15,7 +15,6 @@
 (defvar show-paren-style 'expression)
 (add-to-list 'default-frame-alist '(cursor-type . 'hbar))
 (setq completion-ignore-case t)
-(setq visible-bell t)
 ;; (setq ring-bell-function 'ignore)
 (setq initial-frame-alist default-frame-alist)
 (setq indent-tabs-mode nil)
