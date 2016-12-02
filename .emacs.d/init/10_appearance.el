@@ -57,3 +57,8 @@
   "*Face used by hl-line.")
 (defvar hl-line-face 'hlline-face)
 (global-hl-line-mode)
+
+;; Powerline
+(require' powerline)
+(powerline-default-theme)
+(defvar ns-use-srgb-colorspace nil)
