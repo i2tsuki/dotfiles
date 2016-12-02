@@ -33,15 +33,6 @@
 
 (depends-on "powerline")
 
-(depends-on "e2wm")
-;; (depends-on "e2wm-R")
-;; (depends-on "inlineR")
-(depends-on "e2wm-bookmark")
-;; (depends-on "e2wm-svg-clock")
-;; (depends-on "svg-clock")
-
-(depends-on "ess-R-data-view")
-
 (depends-on "tabbar")
 (depends-on "tabbar-ruler")
 
