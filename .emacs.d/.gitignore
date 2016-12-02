@@ -9,6 +9,7 @@ eshell/history
 games/
 url/
 
+recentf
 tramp
 
 *.elc
