@@ -82,6 +82,43 @@
 	    (setq indent-tabs-mode nil)
 	    (defvar c-basic-offset 4)))
 
+;;; Perl-mode
+(autoload 'cperl-mode "cperl-mode" "alternate mode for editing Perl programs" t)
+(add-to-list 'auto-mode-alist '("\.\([pP][Llm]\|al\|t\|cgi\)\'" . cperl-mode))
+(add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
+(add-to-list 'interpreter-mode-alist '("perl5" . cperl-mode))
+(add-to-list 'interpreter-mode-alist '("miniperl" . cperl-mode))
+(defvar cperl-indent-level 4)
+(defvar cperl-continued-statement-offset 4)
+(defvar cperl-close-paren-offset -4)
+(defvar cperl-label-offset -4)
+(defvar cperl-comment-column 40)
+(defvar cperl-highlight-variables-indiscriminately t)
+(defvar cperl-indent-parens-as-block t)
+(defvar cperl-tab-always-indent nil)
+(defvar cperl-font-lock t)
+;; Perl auto complete
+(add-hook 'cperl-mode-hook
+          '(lambda ()
+             (progn
+               (setq indent-tabs-mode nil)
+               (setq tab-width nil)
+               (require 'perl-completion)
+               (add-to-list 'ac-sources 'ac-source-perl-completion)
+               (perl-completion-mode t)
+              )))
+;; Perl tidy
+(defun perltidy-region ()
+  "Run perltidy on the current region."
+  (interactive)
+  (save-excursion
+    (shell-command-on-region (point) (mark) "perltidy -q" nil t)))
+(defun perltidy-defun ()
+  "Run perltidy on the current defun."
+  (interactive)
+  (save-excursion (mark-defun)
+                  (perltidy-region)))
+
 ;;; Php-mode
 (require 'php-mode)
 
