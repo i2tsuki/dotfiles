@@ -17,5 +17,9 @@
 
 (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 (define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+(defadvice helm-ff-kill-or-find-buffer-fname (around execute-only-if-exist activate)
+  "Execute command only if CANDIDATE exists"
+  (when (file-exists-p candidate)
+    ad-do-it))
 
 (helm-mode 1)
