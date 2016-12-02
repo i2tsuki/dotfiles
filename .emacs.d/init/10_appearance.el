@@ -62,3 +62,19 @@
 (require' powerline)
 (powerline-default-theme)
 (defvar ns-use-srgb-colorspace nil)
+
+;; Popwin
+(defun my/popwin-helm-p (buffer)
+  (let ((name (buffer-name buffer)))
+    (unless (string= name "*helm-mode-execute-extended-command*")
+      (string-match-p "Helm" buffer))))
+(if (require 'popwin nil t)
+    (progn
+      (defvar display-buffer-function 'popwin:display-buffer)
+      (defvar popwin:popup-window-height 0.24)
+      (defvar popwin:close-popup-window-timer-interval 0.5)
+      (push '(my/popwin-helm-p :position bottom :height 0.4) popwin:special-display-config)
+      (push '(dired-mode :position top) popwin:special-display-config)
+      (push '("\\*[Vv][Cc]" :regexp t :position top) popwin:special-display-config)
+      (push '("\\*git-" :regexp t :position top) popwin:special-display-config)
+      ))

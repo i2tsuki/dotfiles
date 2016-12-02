@@ -36,6 +36,8 @@
 (depends-on "tabbar")
 (depends-on "tabbar-ruler")
 
+(depends-on "popwin")
+
 ;; Concurrent
 (depends-on "concurrent")
 
