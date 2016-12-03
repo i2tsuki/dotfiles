@@ -18,9 +18,10 @@
 (setenv "PATH"
  	(concat "/usr/local/sbin:" (getenv "PATH")))
 (setenv "PATH"
+ 	(concat (getenv "HOME") "/.cabal/bin" ":" (getenv "PATH")))
+(setenv "PATH"
  	(concat (getenv "HOME") "/.cargo/bin" ":" (getenv "PATH")))
 (setenv "PATH"
- 	(concat (getenv "HOME") "/.cabal/bin" ":" (getenv "PATH")))
 
 (setenv "LANG"
 	(concat '"ja_JP.UTF-8"))
@@ -41,4 +42,5 @@
 
 ;; Exec path configure
 (add-to-list 'exec-path (concat (getenv "HOME") "/.cabal/bin"))
+(add-to-list 'exec-path (concat (getenv "HOME") "/.cargo/bin"))
 (add-to-list 'exec-path "/usr/local/bin")
