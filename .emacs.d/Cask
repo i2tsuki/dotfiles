@@ -106,4 +106,7 @@
 (depends-on "php-mode")
 
 (depends-on "rust-mode")
+(depends-on "rustfmt")
+(depends-on "flycheck-rust")
 (depends-on "racer")
+(depends-on "company-racer")
