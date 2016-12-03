@@ -81,3 +81,4 @@
 
 ;; Nyan-mode
 (nyan-mode 1)
+(nyan-toggle-wavy-trail)
