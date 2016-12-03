@@ -33,6 +33,8 @@
 
 (depends-on "powerline")
 
+(depends-on "nyan-mode")
+
 (depends-on "tabbar")
 (depends-on "tabbar-ruler")
 

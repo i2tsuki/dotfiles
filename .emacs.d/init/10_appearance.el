@@ -78,3 +78,6 @@
       (push '("\\*[Vv][Cc]" :regexp t :position top) popwin:special-display-config)
       (push '("\\*git-" :regexp t :position top) popwin:special-display-config)
       ))
+
+;; Nyan-mode
+(nyan-mode 1)
