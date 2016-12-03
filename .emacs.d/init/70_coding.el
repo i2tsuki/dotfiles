@@ -155,7 +155,19 @@
 (add-hook 'elpy-mode-hook 'my-insert-file-local-coding)
 
 ;;; Rust-mode
-(autoload 'rust-mode "rust-mode" nil t)
+(require 'rust-mode)
+;; (autoload 'rust-mode "rust-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
-(define-key global-map (kbd "C-c C-f") #'rustfmt-format-buffer)
+
+;; Input the following commands
+;; mkdir -pv ${HOME}/.cargo/src
+;; curl -L https://static.rust-lang.org/dist/rustc-nightly-src.tar.gz -o ${HOME}/.cargo/src/rustc-nightly-src.tar.gz
+;; cd ${HOME}/.cargo/src/; tar xvf ${HOME}/.cargo/src/rustc-nightly-src.tar.gz
+(setq racer-rust-src-path (concat "${HOME}" "/.cargo/src/rustc-nightly/src"))
+(add-hook 'racer-mode-hook #'company-mode)
+
+(define-key rust-mode-map (kbd "C-c C-f") #'rust-format-buffer)
+(define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
+(defvar company-tooltip-align-annotations t)
+
 (add-hook 'rust-mode-hook #'rustfmt-enable-on-save)

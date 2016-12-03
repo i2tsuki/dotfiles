@@ -106,3 +106,4 @@
 (depends-on "php-mode")
 
 (depends-on "rust-mode")
+(depends-on "racer")
