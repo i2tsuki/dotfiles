@@ -9,7 +9,7 @@ do
 done
 
 ELFILE=""
-for file in $(find ./init -name '*.el' -type f -maxdepth 1)
+for file in $(find ./init -name '*.el' -type f -maxdepth 1 | grep -v 'tabbar.el')
 do
     ELFILE+="$(pwd)/${file#./} "
 done
