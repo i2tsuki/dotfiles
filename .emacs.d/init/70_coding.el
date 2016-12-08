@@ -123,6 +123,7 @@
 (require 'php-mode)
 
 ;; Python (elpy)
+(require 'elpy)
 (elpy-enable)
 (defvar elpy-rpc-backend "jedi")
 
