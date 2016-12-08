@@ -51,8 +51,6 @@
 (modify-coding-system-alist 'file "\\.\\(ebuild\\|eclass\\|eblit\\)\\'" 'utf-8)
 
 ;;; Go-mode
-(let ((envs '("PATH" "GOPATH")))
-  (exec-path-from-shell-copy-envs envs))
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 (require 'go-eldoc)
