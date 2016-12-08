@@ -12,5 +12,7 @@ url/
 recentf
 tramp
 
+load-path.el
+
 *.elc
 *.dat
