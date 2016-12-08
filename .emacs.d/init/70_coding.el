@@ -59,7 +59,6 @@
 ;;; Haskell-mode
 (require 'haskell-mode)
 (require 'haskell-cabal)
-(require 'ghc)
 (add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
 (add-to-list 'auto-mode-alist '("\\.lhs$" . literate-haskell-mode))
 (add-to-list 'auto-mode-alist '("\\.cabal\\'" . haskell-cabal-mode))
@@ -68,11 +67,6 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-font-lock)
-;; Auto complete for ghc mod
-(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
-(defun my-ac-haskell-mode ()
-  (defvar ac-sources '(ac-source-words-in-same-mode-buffers ac-source-dictionary ac-source-ghc-mod)))
-(add-hook 'haskell-mode-hook 'my-ac-haskell-mode)
 
 ;;; Java-mode
 (add-hook 'java-mode-hook

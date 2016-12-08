@@ -124,7 +124,7 @@
 ;; (el-get-bundle elpa:groovy-mode)
 
 (el-get-install "haskell-mode")
-(el-get-install "ghc-mod")
+(el-get-install "company-ghc")
 
 (el-get-install "php-mode")
 
