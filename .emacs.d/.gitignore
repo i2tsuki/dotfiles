@@ -1,9 +1,9 @@
 .cask/
 
-auto-install/
 auto-save-list/
 backup/
 dict/
+elisp/
 elpa/
 eshell/history
 games/

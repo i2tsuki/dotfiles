@@ -8,8 +8,17 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)
+(add-to-list 'load-path (locate-user-emacs-file "el-get"))
+(require 'el-get)
+
+(setq el-get-dir (locate-user-emacs-file "elisp"))
+(add-to-list 'load-path (locate-user-emacs-file "elisp"))
+
+;; (require 'cask "~/.cask/cask.el")
+;; (cask-initialize)
+
+;; (load (locate-user-emacs-file "package-install.el"))
+(load (locate-user-emacs-file "load-path.el"))
 
 (setq load-path
       (append '("~/.emacs.d/auto-install")
@@ -17,6 +26,8 @@
 (setq load-path
       (append '("~/.cabal/share/x86_64-linux-ghc-7.10.3/Agda-2.5.1.1/emacs-mode")
               load-path))
+(add-to-list 'load-path (locate-user-emacs-file "el-get/text-adjust"))
+(add-to-list 'load-path (locate-user-emacs-file "el-get/mell"))
 
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/init")
