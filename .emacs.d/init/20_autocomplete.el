@@ -10,6 +10,7 @@
 (global-auto-complete-mode t)
 
 ;;; Company mode config
+(require 'company)
 (global-company-mode +1)
 (custom-set-variables
  '(company-idle-delay nil))
@@ -40,4 +41,5 @@
 (define-key company-active-map (kbd "C-i") 'company-complete-selection)
 (define-key emacs-lisp-mode-map (kbd "C-M-i") 'company-complete)
 
+(require 'company-quickhelp)
 (company-quickhelp-mode +1)
