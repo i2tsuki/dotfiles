@@ -43,7 +43,6 @@
 ;; Auto completion
 ;; (el-get-install "fuzzy")
 (el-get-install "auto-complete")
-(el-get-install "auto-complete-clang")
 (el-get-install "popup")
 ;;(el-get-install "pos-tip")
 (el-get-install "company-mode")
@@ -113,6 +112,9 @@
 
 ;; ----
 ;; Coding
+(el-get-install "company-irony")
+(el-get-install "irony-mode")
+
 (el-get-install "cperl-mode")
 
 (el-get-install "elpy")
@@ -137,3 +139,6 @@
 ;; My package recipe installation
 (el-get-install "text-adjust")
 (el-get-install "mell")
+
+;; Before executing the following command install clang package
+(irony-install-server "cmake -DCMAKE_INSTALL_PREFIX\=/home/kinoo/.emacs.d/irony/ /home/kinoo/.emacs.d/elisp/irony-mode/server && cmake --build . --use-stderr --config Release --target install")

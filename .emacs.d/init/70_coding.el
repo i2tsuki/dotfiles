@@ -12,31 +12,24 @@
 (load-library "agda2")
 
 ;;; C/Cpp mode
-;;; Warning: Its configure is too old.  Update to use this.
-(require 'auto-complete-clang)
 ;; Configure pre-compile header
-(defun my-ac-clang-setup ()
-  (setq ac-auto-start nil)
-  (setq ac-quick-help-delay 0.5)
-  (setq ac-clang-prefix-header "~/.emacs.d/stdafx.pch")
-  (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources))
-  (setq ac-clang-flags
-      (mapcar (lambda (item)(concat "-I" item))
-              (split-string
-               "
-/usr/lib/gcc/x86_64-pc-linux-gnu/4.6.3/include/g++-v4
-/usr/lib/gcc/x86_64-pc-linux-gnu/4.6.3/include/g++-v4/x86_64-pc-linux-gnu
-/usr/lib/gcc/x86_64-pc-linux-gnu/4.6.3/include/g++-v4/backward
-/usr/lib/gcc/x86_64-pc-linux-gnu/4.6.3/include
-/usr/local/include
-/usr/lib/gcc/x86_64-pc-linux-gnu/4.6.3/include-fixed
-/usr/include
-"
-               )))
-  (add-to-list 'ac-sources ac-source-clang))
-;; Add hooks to original mode
-(add-hook 'c-mode-hook 'my-ac-clang-setup)
-(add-hook 'c++-mode-hook 'my-ac-clang-setup)
+(require 'irony)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+(add-to-list 'company-backends 'company-irony)
+
+(setq irony-lang-compile-option-alist
+      (quote ((c++-mode . "c++ -std=c++11 -lstdc++")
+              (c-mode . "c")
+              (objc-mode . "objective-c"))))
+
+(defun ad-irony--lang-compile-option ()
+  (defvar irony-lang-compile-option-alist)
+  (let ((it (cdr-safe (assq major-mode irony-lang-compile-option-alist))))
+    (when it (append '("-x") (split-string it "\s")))))
+(advice-add 'irony--lang-compile-option :override #'ad-irony--lang-compile-option)
 
 ;;; Ebuild-mode
 (add-to-list 'load-path "@SITELISP@")
