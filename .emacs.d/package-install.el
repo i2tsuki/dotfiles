@@ -14,6 +14,9 @@
 (add-to-list 'load-path (locate-user-emacs-file "el-get"))
 (require 'el-get)
 
+(el-get-lock)
+;; Use (el-get-lock-checkout) to restore package from ~/.emacs.d/el-get.lock
+
 ;; (el-get 'sync)
 (setq el-get-dir (locate-user-emacs-file "elisp"))
 (add-to-list 'load-path (locate-user-emacs-file "elisp"))
