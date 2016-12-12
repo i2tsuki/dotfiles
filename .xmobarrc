@@ -27,7 +27,7 @@ Config { font = "xft:Ricty-10:bold"
                     , Run Com "cat" ["/sys/class/backlight/acpi_video0/brightness"] "Brightness" 10
                     , Run Brightness ["-t", "-D", "/sys/module/thinkpad_acpi/parameters/brightness_mode", "-C", "brightness"] 60
                     , Run Volume "default" "Master" [] 10
-                    , Run Date "%a %b %_d %Y %H:%M" "date" 600
+                    , Run Date "%a %b %_d %Y %H:%M%S" "date" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
