@@ -1,6 +1,7 @@
 ;;; 01_lang_and_env.el - Language and environment setup
 
 ;;; Code:
+(setq system-time-locale "C")
 (set-language-environment "Japanese")
 (set-default-coding-systems 'utf-8-unix)
 (set-terminal-coding-system 'utf-8-unix)
