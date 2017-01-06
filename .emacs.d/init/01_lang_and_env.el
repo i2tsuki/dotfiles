@@ -24,8 +24,7 @@
 (setenv "PATH"
  	(concat (getenv "HOME") "/.go/bin" ":" (getenv "PATH")))
 
-(setenv "LANG"
-	(concat '"ja_JP.UTF-8"))
+(setenv "LANG" "en_US.utf-8")
 (setq browse-url-browser-function 'browse-url-generic)
 (defvar browse-url-generic-program "firefox-bin")
 
