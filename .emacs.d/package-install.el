@@ -76,7 +76,7 @@
 ;; Utilities
 (el-get-install "exec-path-from-shell")
 
-;; (el-get-install "helm")
+(el-get-install "helm")
 (el-get-install "helm-c-yasnippet")
 
 (el-get-install "undo-tree")
