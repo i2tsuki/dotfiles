@@ -14,9 +14,6 @@
 (setq el-get-dir (locate-user-emacs-file "elisp"))
 (add-to-list 'load-path (locate-user-emacs-file "elisp"))
 
-;; (require 'cask "~/.cask/cask.el")
-;; (cask-initialize)
-
 ;; (load (locate-user-emacs-file "package-install.el"))
 (load (locate-user-emacs-file "load-path.el"))
 
