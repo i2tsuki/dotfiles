@@ -15,6 +15,7 @@
 
 ;; Helm migemo configure
 (defvar helm-use-migemo t)
+(helm-migemo-mode 1)
 ;; 候補が表示されないときがあるので migemo らないように設定
 ;; (defadvice helm-c-apropos
 ;;   (around ad-helm-apropos activate)
