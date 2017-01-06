@@ -18,9 +18,6 @@
 (load (locate-user-emacs-file "load-path.el"))
 
 (setq load-path
-      (append '("~/.emacs.d/auto-install")
-              load-path))
-(setq load-path
       (append '("~/.cabal/share/x86_64-linux-ghc-7.10.3/Agda-2.5.1.1/emacs-mode")
               load-path))
 (add-to-list 'load-path (locate-user-emacs-file "el-get/text-adjust"))
