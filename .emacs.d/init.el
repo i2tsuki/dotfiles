@@ -13,7 +13,6 @@
 
 (setq el-get-dir (locate-user-emacs-file "elisp"))
 
-;; (load (locate-user-emacs-file "package-install.el"))
 (load (locate-user-emacs-file "load-path.el"))
 
 (setq load-path
