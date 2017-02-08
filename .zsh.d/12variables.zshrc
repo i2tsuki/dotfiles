@@ -12,6 +12,9 @@ PATH=${PATH}:~/.cask/bin
 PATH=${PATH}:~/.cabal/bin
 PATH=${PATH}:~/.cargo/bin
 PATH=${PATH}:~/node_modules/.bin
+PATH=${PATH}:~/.rbenv/bin
+
+eval "$(rbenv init -)"
 
 PROMPT="%(?.%{%F{magenta}%}.%{%F{red}%})%B%n%F{reset_color}@%(?.%{%F{magenta}%}.%{%F{red}%})%B%m%u%f:%F{green}%d%F{reset_color}%# "
 
