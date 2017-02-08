@@ -36,14 +36,27 @@ liberator.globalVariables.proxy_settings = [
 	]
     },
     {
-	conf_name: 'local8080',
-	conf_usage: 'use localhost proxy',
+	conf_name: 'local1080socks',
+	conf_usage: 'use localhost proxy 1080 port',
+	settings: [
+            {label: 'type', param: 1},
+            {label: 'http', param: ''},
+            {label: 'http_port', param: 0},
+            {label: 'ssl', param: ''},
+            {label: 'ssl_port', param: 0},
+            {label: 'socks', param: '127.0.0.1'},
+            {label: 'socks_port', param: 1080},
+	]
+    },
+    {
+	conf_name: 'local8080http',
+	conf_usage: 'use localhost proxy 8080 port',
 	settings: [
             {label: 'type', param: 1},
             {label: 'http', param: '127.0.0.1'},
             {label: 'http_port', param: 8080},
-	    {label: 'ssl', param: '127.0.0.1'},
-	    {label: 'ssl_port', param: 8080},
+            {label: 'ssl', param: '127.0.0.1'},
+            {label: 'ssl_port', param: 8080},
             {label: 'socks', param: ''},
             {label: 'socks_port', param: 0},
 	]
@@ -55,8 +68,8 @@ liberator.globalVariables.proxy_settings = [
             {label: 'type', param: 1},
             {label: 'http', param: ''},
             {label: 'http_port', param: 0},
-	    {label: 'ssl', param: ''},
-	    {label: 'ssl_port', param: 0},
+            {label: 'ssl', param: ''},
+            {label: 'ssl_port', param: 0},
             {label: 'socks', param: '127.0.0.1'},
             {label: 'socks_port', param: 9050},
 	]
