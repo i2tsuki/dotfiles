@@ -1,4 +1,8 @@
 #!/bin/sh
+
+# GTK3 Application Scaling
+export GDK_SCALE=1.2
+
 exec xbacklight -set 50 &
 
 exec nitrogen --restore &
