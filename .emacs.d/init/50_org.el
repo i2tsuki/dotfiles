@@ -21,3 +21,6 @@
 ;; Display bullet for org
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+;; Org-mode export hatena diary description
+(require 'org-install)

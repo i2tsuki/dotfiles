@@ -34,6 +34,10 @@
 	     :type http
 	     :url "http://rubikitch.com/f/mell.el"
 	     )
+	(:name ox-hatena
+	     :type http
+	     :url "https://raw.githubusercontent.com/akisute3/ox-hatena/master/ox-hatena.el"
+	     )
 	))
 
 (el-get-install "init-loader")
@@ -142,6 +146,7 @@
 ;; My package recipe installation
 (el-get-install "text-adjust")
 (el-get-install "mell")
+(el-get-install "ox-hatena")
 
 ;; Before executing the following command install clang package
 (irony-install-server "cmake -DCMAKE_INSTALL_PREFIX\=/home/kinoo/.emacs.d/irony/ /home/kinoo/.emacs.d/elisp/irony-mode/server && cmake --build . --use-stderr --config Release --target install")
