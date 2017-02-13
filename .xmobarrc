@@ -17,6 +17,7 @@ Config { font = "xft:Ricty-11:bold"
        , commands = [ Run Com "uname" ["-s","-r"] "uname" 36000
                     , Run Network "wlp4s0" ["-L","0","-H","32","--normal","green","--high","red"] 60
                     -- , Run Wireless "wlp4s0" ["-t", "ESSID: <essid> <quality>"] 60
+                    , Run Com "ifnetwistat" [] "wlp4s0wi" 60
                     , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 60
                     , Run Memory ["-t","Mem: <usedratio>%"] 360
                     , Run Battery ["-t", "Bat: <acstatus> <left>% <timeleft>"
@@ -35,5 +36,5 @@ Config { font = "xft:Ricty-11:bold"
                     ]
        , sepChar = "%"
        , alignSep = "@@"
-       , template = "<fc=#ee9a00>%StdinReader%</fc> @@ | %cpu% %memory% %wlp4s0% | %default:Master%Br: %Brightness%/15 %battery% <fc=#ee9a00>%date%</fc>"
+       , template = "<fc=#ee9a00>%StdinReader%</fc> @@ | %cpu% %memory% %wlp4s0% %wlp4s0wi% | %default:Master%Br: %Brightness%/15 %battery% <fc=#ee9a00>%date%</fc>"
        }
