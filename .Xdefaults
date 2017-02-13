@@ -53,12 +53,12 @@ urxvt.font: \
     xft:Inconsolata:style=Regular:size=12,antialias=true:hinting=light, \
     xft:Ricty Diminished Discord:style=Regular:size=12,antialias=true:hinting=light, \
     xft:Noto Emoji:style=Regular,pixelsize=12,antialias=true:hinting=light, \
-    xft:Symbola:Style=Regular:size=10 \
+    xft:Symbola:Style=Regular:size=12 \
 urxvt.boldfont: \
     xft:Inconsolata:style=Regular:size=12,antialias=true:hinting=light, \
     xft:Ricty Diminished Discord:style=Bold:size=12,antialias=true:hinting=light, \
     xft:Noto Emoji:style=Regular,size=12,antialias=true:hinting=light, \
-    xft:Symbola:Style=Regular:pixelsize=10 \
+    xft:Symbola:Style=Regular:pixelsize=12 \
 urxvt.letterSpace: 1
 urxvt.lineSpace: 1.16
 urxvt.colorUL: #5
