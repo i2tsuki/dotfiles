@@ -11,6 +11,7 @@ exec tudor-volumed &
 exec blueman-applet &
 exec dropbox &
 exec conky &
+/opt/Symantec/symantec_antivirus/savtray &
 
 exec ${HOME}/.local/bin/mpdcover &
 exec ${HOME}/.local/bin/trayer-srg.custom &
