@@ -1,5 +1,5 @@
 ## ToDo: find を使って綺麗に書き直す
-for file in `find ~/.zsh.d/ -type f -name '*.zshrc'`
+for file in $(find ~/.zsh.d/ -type f -name '*.zshrc' | sort)
 do
     source $file
 done
