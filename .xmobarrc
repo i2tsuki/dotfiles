@@ -28,13 +28,13 @@ Config { font = "xft:Ricty-11:bold"
                                    , "-f", "status"
                                   ] 360
                     -- , Run Com "cat" ["/sys/class/backlight/acpi_video0/brightness"] "Brightness" 10
-                    , Run Com "cat" ["/sys/module/thinkpad_acpi/parameters/brightness_mode"] "Brightness" 60
-                    -- , Run Brightness ["-t", "-D", "/sys/module/thinkpad_acpi/parameters/brightness_mode", "-C", "brightness"] 60
+                    , Run Com "calc-brightness" [""] "Brightness" 60
+                    -- , Run Brightness ["-t", "-D", "/sys/class/backlight/intel_backlight/brightness", "-C", "brightness"] 60
                     , Run Volume "default" "Master" [] 10
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "@@"
-       , template = "<fc=#ee9a00>%StdinReader%</fc> @@ | %cpu% %memory% %wlp4s0% %wlp4s0wi% | %default:Master%Br: %Brightness%/15 %battery% <fc=#ee9a00>%date%</fc>"
+       , template = "<fc=#ee9a00>%StdinReader%</fc> @@ | %cpu% %memory% %wlp4s0% %wlp4s0wi% | %default:Master%Br: %Brightness%/100 %battery% <fc=#ee9a00>%date%</fc>"
        }
