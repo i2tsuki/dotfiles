@@ -17,7 +17,7 @@ exec ${HOME}/.local/bin/mpdcover &
 exec ${HOME}/.local/bin/trayer-srg.custom &
 exec ${HOME}/.local/bin/firefox-sync &
 
-# exec xmodmap ${HOME}/.Xmodmaprc &
+exec xmodmap ${HOME}/.Xmodmaprc &
 
 exec xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" 1 &
 exec xinput set-ptr-feedback "SynPS/2 Synaptics TouchPad" 8 2 1 &
