@@ -15,7 +15,7 @@ exec conky &
 
 exec ${HOME}/.local/bin/mpdcover &
 exec ${HOME}/.local/bin/trayer-srg.custom &
-exec ${HOME}/.local/bin/firefox-sync &
+# exec ${HOME}/.local/bin/firefox-sync &
 
 exec xmodmap ${HOME}/.Xmodmaprc &
 
