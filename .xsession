@@ -7,7 +7,6 @@ exec xbacklight -set 50 &
 
 exec nitrogen --restore &
 exec xcompmgr -n &
-exec tudor-volumed &
 exec blueman-applet &
 exec dropbox &
 exec conky &
