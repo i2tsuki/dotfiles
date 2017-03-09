@@ -42,7 +42,7 @@ ${top name 2} ${top cpu 2} ${top mem 2} ${goto 243} ${top_mem name 2} ${top_mem 
 ${top name 3} ${top cpu 3} ${top mem 3} ${goto 243} ${top_mem name 3} ${top_mem cpu 3} ${top_mem mem 3}
 ${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=18}Hwmon${font} ${hr 1}${color}
 CPU ${alignr}${hwmon temp 1} celsius
-# HDD ${alignr}${hddtemp /dev/sda}
+# HDD ${alignr}${execi 60 hddtemp /dev/nvme0n1}
 Chip ${alignr}${ibm_fan}rpm
 ${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=18}Mpd daemon${font} ${hr 1}${color}
 ${image /tmp/mpdart.png -p 4,296 -s 172x172 -n} \
