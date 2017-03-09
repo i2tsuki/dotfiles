@@ -46,7 +46,8 @@
 
 ;; ---
 ;; Documentation
-(el-get-install "auctex")
+;; auctex のビルドには pdftex が必要
+;; (el-get-install-sync "auctex")
 
 ;; ---
 ;; Auto completion
