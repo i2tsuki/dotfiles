@@ -32,7 +32,7 @@ CPU ${alignr}${freq} MHz
 ${cpugraph 20,480 green -t}
 RAM    $mem / $memmax ($memperc%) ${goto 243} Swap ${alignr}$swap / $swapmax ($swapperc%)
 ${membar 4, 237} ${goto 243} ${swapbar 4, 237}
-Network up${upspeed} ${goto 243} down${downspeed}
+Network up${upspeed wlp4s} ${goto 243} down${downspeed wlp4s0}
 ${upspeedgraph wlp4s0 10,237 green -t} ${goto 243} ${downspeedgraph wlp4s0 10,237 green -t}
 DiskIO wrt${diskio_write} ${goto 243} read${diskio_read}
 ${diskiograph_write 10,237 green -t} ${goto 243} ${diskiograph_read 10,237 green -t}
