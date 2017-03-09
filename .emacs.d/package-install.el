@@ -54,7 +54,7 @@
 ;; (el-get-install "fuzzy")
 (el-get-install "auto-complete")
 (el-get-install "popup")
-;;(el-get-install "pos-tip")
+(el-get-install "pos-tip")
 (el-get-install "company-mode")
 (el-get-install "company-quickhelp")
 
