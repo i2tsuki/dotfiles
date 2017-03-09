@@ -14,15 +14,6 @@
 (add-to-list 'load-path (locate-user-emacs-file "el-get"))
 (require 'el-get)
 
-(el-get-lock)
-;; Use (el-get-lock-checkout) to restore package from ~/.emacs.d/el-get.lock
-
-;; (el-get 'sync)
-(setq el-get-dir (locate-user-emacs-file "elisp"))
-(add-to-list 'load-path (locate-user-emacs-file "elisp"))
-
-(setq el-get-verbose t)
-
 ;; See info to enter "C-u M-x info RET" and view "~/.emacs.d/el-get/el-get/el-get.info"
 (setq el-get-sources
       '(
@@ -39,6 +30,17 @@
 	     :url "https://raw.githubusercontent.com/akisute3/ox-hatena/master/ox-hatena.el"
 	     )
 	))
+
+;; (el-get-lock)
+;; Use (el-get-lock-checkout) to restore package from ~/.emacs.d/el-get.lock
+
+;; (el-get 'sync)
+(setq el-get-dir (locate-user-emacs-file "elisp"))
+(add-to-list 'load-path (locate-user-emacs-file "elisp"))
+(setq el-get-verbose t)
+(setq el-get-default-process-sync t)
+
+;; (el-get 'sync)
 
 (el-get-install "init-loader")
 
