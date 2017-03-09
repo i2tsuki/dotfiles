@@ -4,7 +4,7 @@ set -u
 
 # rm -rfv ./elpa ./elisp
 
-emacs --batch -l ~/.emacs.d/package-install.el
+emacs --batch -q -l ~/.emacs.d/package-install.el
 
 rm -fv ./load-path.el
 for file in $(find ./elisp -mindepth 1 -maxdepth 1 -type d)
