@@ -45,7 +45,7 @@ CPU ${alignr}${hwmon temp 1} celsius
 # HDD ${alignr}${execi 60 hddtemp /dev/nvme0n1}
 Chip ${alignr}${ibm_fan}rpm
 ${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=18}Mpd daemon${font} ${hr 1}${color}
-${image /tmp/mpdart.png -p 4,296 -s 172x172 -n} \
+${image /tmp/mpdart.png -p 3,386 -s 232x232 -n} \
 ${goto 240} $mpd_artist
 ${goto 240} $mpd_title
 ${goto 240} $mpd_album
