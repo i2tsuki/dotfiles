@@ -1,6 +1,8 @@
 #!/bin/sh
 
-set -u
+set -eu
+
+exec 2>&1
 
 # rm -rfv ./elpa ./elisp
 
