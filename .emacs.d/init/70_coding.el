@@ -9,7 +9,7 @@
 (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
 
 ;;; Agda-mode
-(load-library "agda2")
+;; (load-library "agda2")
 
 ;;; C/Cpp mode
 ;; Configure pre-compile header
