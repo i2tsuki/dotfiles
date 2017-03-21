@@ -2,6 +2,9 @@
 
 set -eu
 
+# Prepare for yasnippet
+mkdir -pv ~/.emacs.d/yasnippet
+
 # Clean elc files
 for file in $(find ./init -name '*.elc' -type f)
 do
