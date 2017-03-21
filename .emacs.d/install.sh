@@ -45,7 +45,6 @@ done
 
 # Input Method
 for i in \
-    "ddskk" \
     "migemo"
 do
     EL_GET_PACKAGE=$i $CMD
