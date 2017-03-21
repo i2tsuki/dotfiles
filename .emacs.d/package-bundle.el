@@ -16,4 +16,4 @@
 (el-get-bundle elpa:company-racer)
 
 ;; Before executing the following command install clang package
-(irony-install-server "cmake -DCMAKE_INSTALL_PREFIX\=/home/kinoo/.emacs.d/irony/ /home/kinoo/.emacs.d/elisp/irony-mode/server && cmake --build . --use-stderr --config Release --target install")
+;; (irony-install-server "cmake -DCMAKE_INSTALL_PREFIX\=/home/kinoo/.emacs.d/irony/ /home/kinoo/.emacs.d/elisp/irony-mode/server && cmake --build . --use-stderr --config Release --target install")
