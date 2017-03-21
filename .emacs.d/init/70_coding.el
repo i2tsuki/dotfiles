@@ -107,6 +107,9 @@
 ;;; Php-mode
 (require 'php-mode)
 
+;; Ruby
+(setq ruby-insert-encoding-magic-comment nil)
+
 ;; Python (elpy)
 (require 'elpy)
 (elpy-enable)
