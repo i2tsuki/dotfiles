@@ -13,8 +13,8 @@ function peco-execute-history()
     BUFFER="$item"
     zle accept-line
 }
-bindkey '^X^R' peco-execute-history
 zle -N peco-execute-history
+bindkey '^X^R' peco-execute-history
 
 function peco-put-history()
 {
