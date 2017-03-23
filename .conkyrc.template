@@ -58,4 +58,7 @@ ${goto 240} mpd_repeat: ${mpd_repeat}
 ${goto 240} mpd_status: $mpd_status
 ${goto 240} ${mpd_bar 4,240}
 ${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=18}Agenda${font} ${hr 1}${color}
-
+Work: ${execpi 1800 gcalcli agenda $(date +"%Y-%m-%dT%H:%M" ) $(date --date "today next day next day next day" +"%Y-%m-%d") --conky --military --color_date green --color_owner green --calendar="company@example.com" | sed "s/）/)/" | sed "s/＠/@/"}
+# Reminder for notification
+${execpi 600 gcalcli remind 60 --calendar="company@example.com"}
+Personal: ${execpi 900 gcalcli agenda $(date +"%Y-%m-%dT%H:%M" ) $(date --date "today next day next day next day" +"%Y-%m-%d") --conky --military --color_date green --color_owner green --calendar="personal@gmail.com"}
