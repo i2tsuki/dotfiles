@@ -148,7 +148,6 @@
 ;; (autoload 'rust-mode "rust-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
-;; Input the following commands
 (setq racer-rust-src-path (concat "${HOME}" "/.cargo/src/rustc-nightly-src"))
 ;; Type the following commands
 ;; mkdir -pv ${HOME}/.cargo/src
