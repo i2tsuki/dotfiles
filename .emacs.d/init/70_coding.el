@@ -149,10 +149,11 @@
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 ;; Input the following commands
+(setq racer-rust-src-path (concat "${HOME}" "/.cargo/src/rustc-nightly-src"))
+;; Type the following commands
 ;; mkdir -pv ${HOME}/.cargo/src
 ;; curl -L https://static.rust-lang.org/dist/rustc-nightly-src.tar.gz -o ${HOME}/.cargo/src/rustc-nightly-src.tar.gz
 ;; cd ${HOME}/.cargo/src/; tar xvf ${HOME}/.cargo/src/rustc-nightly-src.tar.gz
-(setq racer-rust-src-path (concat "${HOME}" "/.cargo/src/rustc-nightly/src"))
 (add-hook 'racer-mode-hook #'company-mode)
 
 (define-key rust-mode-map (kbd "C-c C-f") #'rust-format-buffer)
