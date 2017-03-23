@@ -95,6 +95,7 @@ done
 # Config mode
 for  i in \
     "dockerfile-mode" \
+    "ebuild-mode" \
     "nginx-mode"
 do
     EL_GET_PACKAGE=$i $CMD
