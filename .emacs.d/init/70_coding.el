@@ -145,7 +145,7 @@
 
 ;;; Rust-mode
 (require 'rust-mode)
-;; (autoload 'rust-mode "rust-mode" nil t)
+
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 (setq racer-rust-src-path (concat "${HOME}" "/.cargo/src/rustc-nightly-src"))
@@ -153,7 +153,14 @@
 ;; mkdir -pv ${HOME}/.cargo/src
 ;; curl -L https://static.rust-lang.org/dist/rustc-nightly-src.tar.gz -o ${HOME}/.cargo/src/rustc-nightly-src.tar.gz
 ;; cd ${HOME}/.cargo/src/; tar xvf ${HOME}/.cargo/src/rustc-nightly-src.tar.gz
+(add-hook 'rust-mode-hook (lambda ()
+                            (racer-mode)
+                            (flycheck-rust-setup)))
+(add-hook 'racer-mode-hook #'eldoc-mode)
 (add-hook 'racer-mode-hook #'company-mode)
+
+(eval-after-load "rust-mode"
+  '(setq-default rust-format-on-save t))
 
 (define-key rust-mode-map (kbd "C-c C-f") #'rust-format-buffer)
 (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
