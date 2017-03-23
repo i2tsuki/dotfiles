@@ -165,5 +165,3 @@
 (define-key rust-mode-map (kbd "C-c C-f") #'rust-format-buffer)
 (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
 (defvar company-tooltip-align-annotations t)
-
-(add-hook 'rust-mode-hook #'rustfmt-enable-on-save)
