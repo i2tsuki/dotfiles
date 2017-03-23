@@ -34,3 +34,19 @@
          (lag (+ (* 60000 min) (* 1000 sec) msec)))
     (message "'.emacs.el' loading time: %d msec." lag)))
 (defvar my-time-zero (current-time))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-idle-delay nil)
+ '(package-selected-packages
+   (quote
+    (company-racer ox-qmd concurrent color-theme-github ddskk)))
+ '(yas-trigger-key "TAB"))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
