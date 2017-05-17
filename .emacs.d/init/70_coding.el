@@ -145,6 +145,7 @@
 
 ;;; Rust-mode
 (require 'rust-mode)
+(require 'flycheck-rust)
 
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
@@ -154,8 +155,8 @@
 ;; curl -L https://static.rust-lang.org/dist/rustc-nightly-src.tar.gz -o ${HOME}/.cargo/src/rustc-nightly-src.tar.gz
 ;; cd ${HOME}/.cargo/src/; tar xvf ${HOME}/.cargo/src/rustc-nightly-src.tar.gz
 (add-hook 'rust-mode-hook (lambda ()
-                            (racer-mode)
-                            (flycheck-rust-setup)))
+			    (flycheck-rust-setup)
+                            (racer-mode)))
 (add-hook 'racer-mode-hook #'eldoc-mode)
 (add-hook 'racer-mode-hook #'company-mode)
 
