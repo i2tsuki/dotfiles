@@ -63,6 +63,7 @@ myManageHookShift = composeAll
     , className =? "Google-chrome-beta"     --> doFloat
     , className =? "Xfrun4"                 --> doFloat
     , className =? "Player"                 --> doFloat
+    , className =? "glxgears"               --> doFloat
     ]
     where viewShift = doF . liftM2 (.) W.view W.shift
 -- ウィンドウ作成時のフローティングを指定
