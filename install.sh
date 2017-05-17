@@ -2,7 +2,7 @@
 
 set -eu
 
-EXCLUDES="Makefile|LICENSE|clean.sh|install.sh|udev.rules|.git|.gitignore|^.$"
+EXCLUDES="Makefile|LICENSE|clean.sh|install.sh|udev.rules|.config|.git|.gitignore|^.$"
 
 # public
 X11ONLY=""
@@ -28,8 +28,16 @@ else
     done
 fi
 
-# secrets
-for file in $(find ./secrets -maxdepth 1 -type f | egrep -v ${EXCLUDES})
+# .config
+for file in $(find .config -mindepth 1 -maxdepth 1 -type d)
 do
-    ln -sfv $(readlink -f $file) ${HOME}/
+    ln -sfv $(readlink -f $file) ${HOME}/.config/
 done
+
+# secrets
+if [ -d ./secrets ] ; then
+    for file in $(find ./secrets -maxdepth 1 -type f | egrep -v ${EXCLUDES})
+    do
+	ln -sfv $(readlink -f $file) ${HOME}/
+    done
+fi
