@@ -77,8 +77,8 @@ urxvt.keysym.C-Delete: perl:matcher:last
 urxvt.keysym.M-Delete: perl:matcher:list
 urxvt.matcher.button: 1
 ! urxvt.url-select.launcher: /usr/bin/xdg-open
-urxvt.url-select.launcher: /usr/bin/firefox-bin
-urxvt.url-launcher: /usr/bin/firefox-bin
+urxvt.url-select.launcher: /usr/bin/firefox
+urxvt.url-launcher: /usr/bin/firefox
 urxvt.url-select.underline: true
 urxvt.keysym.M-c:   perl:clipboard:copy
 urxvt.keysym.M-v:   perl:clipboard:paste
