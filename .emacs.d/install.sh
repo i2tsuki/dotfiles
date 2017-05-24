@@ -112,6 +112,7 @@ for i in \
     "go-eldoc" \
     "groovy-emacs-mode" \
     "haskell-mode" \
+    "lua-mode" \
     "company-ghc" \
     "php-mode" \
     "rust-mode" \
