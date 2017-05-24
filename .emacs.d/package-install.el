@@ -6,6 +6,7 @@
 
 (setq el-get-dir (locate-user-emacs-file "elisp"))
 (add-to-list 'load-path (locate-user-emacs-file "elisp"))
+(add-to-list 'load-path (locate-user-emacs-file "elisp/emacs-async"))
 (setq el-get-verbose t)
 (setq el-get-default-process-sync t)
 
