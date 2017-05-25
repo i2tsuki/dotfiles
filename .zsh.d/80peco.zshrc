@@ -1,5 +1,4 @@
 #!/bin/zsh
-# peco function
 
 function peco-execute-history()
 {
