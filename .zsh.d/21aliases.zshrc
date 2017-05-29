@@ -11,3 +11,6 @@ alias pdflatex="pdfplatex"
 alias vi="/usr/bin/vim"
 alias ec="emacsclient -n"
 alias ecc="emacsclient -nw"
+
+# git
+alias gck="git checkout"
