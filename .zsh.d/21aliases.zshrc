@@ -14,3 +14,4 @@ alias ecc="emacsclient -nw"
 
 # git
 alias gck="git checkout"
+alias gp="git-pull"
