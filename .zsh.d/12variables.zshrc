@@ -19,5 +19,5 @@ eval "$(rbenv init -)"
 PROMPT="%(?.%{%F{magenta}%}.%{%F{red}%})%B%n%F{reset_color}@%(?.%{%F{magenta}%}.%{%F{red}%})%B%m%u%f:%F{green}%d%F{reset_color}%# "
 
 HISTFILE=~/.zsh_history
-HISTSIZE=2000
-SAVEHIST=2000
+HISTSIZE=7000
+SAVEHIST=7000
