@@ -25,7 +25,6 @@ function rprompt-cvs
     # action="$(VCS_INFO_git_getaction ${gitdir})" && action="$(action)"
 
     echo ${vcs_info_msg_0_}
-
 }
 
 setopt prompt_subst
