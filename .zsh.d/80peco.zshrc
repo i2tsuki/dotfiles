@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-function peco-execute-history()
+function skim-execute-history()
 {
     local item
-    item=$(builtin history -n -r 1 | peco)
+    item=$(builtin history -n -r 1 | sk)
 
     if [[ -z "$item" ]]; then
 	return 1
@@ -12,13 +12,13 @@ function peco-execute-history()
     BUFFER="$item"
     zle accept-line
 }
-zle -N peco-execute-history
-bindkey '^X^R' peco-execute-history
+zle -N skim-execute-history
+bindkey '^X^R' skim-execute-history
 
-function peco-put-history()
+function skim-put-history()
 {
     local item
-    item=$(builtin history -n -r 1 | peco)
+    item=$(builtin history -n -r 1 | sk)
 
     if [[ -z "$item" ]]; then
     	return 1
@@ -27,17 +27,17 @@ function peco-put-history()
     BUFFER="$item"
     CURSOR=$#BUFFER
 }
-zle -N peco-put-history
-bindkey '^X^P' peco-put-history
+zle -N skim-put-history
+bindkey '^X^P' skim-put-history
 
-function peco-z-search
+function skim-z-search
 {
-    which peco z > /dev/null
+    which sk z > /dev/null
     if [ $? -ne 0 ]; then
-        echo "Please install peco and z"
+        echo "Please install skim and z"
         return 1
     fi
-    local res=$(z | sort -rn | cut -c 12- | peco)
+    local res=$(z | sort -rn | cut -c 12- | sk)
     if [ -n "$res" ]; then
         BUFFER+="cd $res"
         zle accept-line
@@ -45,5 +45,5 @@ function peco-z-search
         return 1
     fi
 }
-zle -N peco-z-search
-bindkey '^X^F' peco-z-search
+zle -N skim-z-search
+bindkey '^X^F' skim-z-search

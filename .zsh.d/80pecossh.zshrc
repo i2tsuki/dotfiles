@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-function peco-ssh () {
+function skim-ssh () {
   local selected_host=$(python3 -c '
 import os
 
@@ -9,12 +9,12 @@ with open(os.getenv("HOME") + "/.ssh/config") as f:
         if line.startswith("Host") and line.find("*") == -1:
             host = line.strip().split(" ", 1)[1]
             print(host)
-' | peco --query "$LBUFFER")
+' | sk --query "$LBUFFER")
   if [ -n "$selected_host" ]; then
     BUFFER="ssh ${selected_host}"
     zle accept-line
   fi
   zle clear-screen
 }
-zle -N peco-ssh
-bindkey '^X^L' peco-ssh
+zle -N skim-ssh
+bindkey '^X^L' skim-ssh
