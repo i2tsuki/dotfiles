@@ -1,5 +1,4 @@
 #!/usr/bin/lua
-
 local https = require 'ssl.https'
 
 require 'os'
@@ -9,13 +8,9 @@ require 'cairo'
 user = "kizkoh"
 start_match = "          <svg width=\"676\" height=\"104\" class=\"js-calendar-graph-svg\">"
 end_match = "</svg>"
-after_date = os.date("%Y.%m.%d",  os.time() - 60 * 60 * 24 * (175 + tonumber(os.date("%u", os.time()), 10) - 1))
+after_date = os.date("%Y.%m.%d",  os.time() - 60 * 60 * 24 * (169 + tonumber(os.date("%u", os.time()), 10) - 1))
 today_date = os.date("%Y.%m.%d")
 alert_color = "#D104D1"
-
-rsvg_handle = nil
-cairo_surface = nil
-cairo = nil
 
 function conky_get_github_grass()
    local resp = {}
@@ -26,19 +21,20 @@ function conky_get_github_grass()
       protocol = "tlsv1"
    }
 
-   tmpfile = io.open("/dev/shm/grass.tmp", "r")
-   svgfile = io.open("/dev/shm/grass.svg", "w")
+   local tmpfile = io.open("/dev/shm/grass.tmp", "r")
+   local svgfile = io.open("/dev/shm/grass.svg", "w")
    local in_svg = false
    local in_exclude = false
    local in_week = false
+   horizon_pos = 13
+
    for line in tmpfile:lines() do
       if not in_svg and line == start_match then
    	 in_svg = true
       end
       if in_svg then
 	 if not in_exclude then
-	    -- if line == "      <g transform=\"translate(0, 0)\">" then
-	    if line:find("<g transform=\"translate.0, 0.\">") ~= nil then
+	    if line:find("<g transform=\"translate%(0, 0%)\">") ~= nil then
 	       in_exclude = true
 	    else
 	       if string.find(line, "Sun") ~= nil then
@@ -50,10 +46,19 @@ function conky_get_github_grass()
 	       if in_week then
 		  line = ""
 	       end
+	       -- Date matches today
 	       if string.find(line, today_date) ~= nil then
 		  line = string.gsub(line,  "#ebedf0", alert_color)
 	       end
-	       line = string.gsub(line,  "<text ", "<text fill=\"white\" ")
+	       -- Generate new translate
+	       if string.find(line, "<g transform=\"translate%(%d+, 0%)\">") ~= nil then
+		  line = "      <g transform=\"translate(" .. tostring(horizon_pos) .. ", 0)\">"
+		  horizon_pos_tmp = horizon_pos + 13
+		  horizon_pos = horizon_pos_tmp
+	       end
+	       if line:find("<text .*") ~= nil then
+		  line = ""
+	       end
 	       svgfile:write(line .. "\n")
 	    end
 	 else
@@ -68,6 +73,7 @@ function conky_get_github_grass()
 	 end
       end
    end
+
    tmpfile:close()
    svgfile:close()
 end
@@ -77,24 +83,24 @@ function conky_draw_github_grass_pre()
       return
    end
 
-   rsvg_handle = rsvg_handle_new_from_file("/dev/shm/grass.svg")
-   cairo_surface = cairo_xlib_surface_create(conky_window.display, conky_window.drawable, conky_window.visual, conky_window.width, conky_window.height)
-   cairo = cairo_create(cairo_surface)
-
-   -- cairo_translate(cairo, -574, 792)
-   cairo_translate(cairo, -574, 892)
+   cairo_surface = cairo_xlib_surface_create(conky_window.display,
+					     conky_window.drawable,
+					     conky_window.visual,
+					     conky_window.width,
+					     conky_window.height)
+   local cairo = cairo_create(cairo_surface)
+   cairo_translate(cairo, 0, 640)
    cairo_scale(cairo, 1.6, 1.6)
+
    rsvg_handle_render_cairo(rsvg_handle, cairo)
-   cairo_stroke(cairo)
+   cairo_destroy(cairo)
 end
 
 function conky_draw_github_grass_post()
-   cairo_destroy(cairo)
-   cairo = nil
    cairo_surface_destroy(cairo_surface)
-   cairo_surface = nil
-   rsvg_destroy_handle(rsvg_handle)
-   rsvg_handle= nil
 end
 
+rsvg_handle = rsvg_create_handle_from_file("/dev/shm/grass.svg")
 conky_get_github_grass()
+cairo_surface = nil
+cairo = nil
