@@ -21,3 +21,5 @@ PROMPT="%(?.%{%F{magenta}%}.%{%F{red}%})%B%n%F{reset_color}@%(?.%{%F{magenta}%}.
 HISTFILE=~/.zsh_history
 HISTSIZE=7000
 SAVEHIST=7000
+
+export SKIM_DEFAULT_OPTIONS="--reverse"
