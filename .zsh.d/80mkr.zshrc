@@ -10,7 +10,7 @@ complete-mackerel-host () {
     local REPLY
     local reply
 
-    local filter="peco" # or 'peco'
+    local filter="sk"
 
     split-shell-arguments
     if [ $(($REPLY % 2)) -eq 0 ]; then
