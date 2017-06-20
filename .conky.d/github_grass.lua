@@ -100,7 +100,7 @@ function conky_draw_github_grass_post()
    cairo_surface_destroy(cairo_surface)
 end
 
-rsvg_handle = rsvg_create_handle_from_file("/dev/shm/grass.svg")
 conky_get_github_grass()
+rsvg_handle = rsvg_create_handle_from_file("/dev/shm/grass.svg")
 cairo_surface = nil
 cairo = nil
