@@ -89,7 +89,7 @@ function conky_draw_github_grass_pre()
 					     conky_window.width,
 					     conky_window.height)
    local cairo = cairo_create(cairo_surface)
-   cairo_translate(cairo, 0, 640)
+   cairo_translate(cairo, 0, 612)
    cairo_scale(cairo, 1.6, 1.6)
 
    rsvg_handle_render_cairo(rsvg_handle, cairo)
