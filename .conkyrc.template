@@ -48,9 +48,11 @@ ${top name 1} ${top cpu 1} ${top mem 1} ${goto 243} ${top_mem name 1} ${top_mem 
 ${top name 2} ${top cpu 2} ${top mem 2} ${goto 243} ${top_mem name 2} ${top_mem cpu 2} ${top_mem mem 2}
 ${top name 3} ${top cpu 3} ${top mem 3} ${goto 243} ${top_mem name 3} ${top_mem cpu 3} ${top_mem mem 3}
 ${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=18}Hwmon${font} ${hr 1}${color}
+# Hwmon
 CPU ${alignr}${hwmon temp 1} celsius
 # HDD ${alignr}${execi 60 hddtemp /dev/nvme0n1}
 Chip ${alignr}${ibm_fan}rpm
+# Mpd daemon
 ${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=18}Mpd daemon${font} ${hr 1}${color}
 ${image /tmp/mpdart.png -p 3,386 -s 232x232 -n} \
 ${goto 240} $mpd_artist
@@ -68,6 +70,7 @@ ${goto 240} ${mpd_bar 4,240}
 ${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=18}Github Grass${font} ${hr 1}${color}
 ${voffset 100}
 ${execpi 3600 touch /home/kizkoh/.conky.d/github_grass.lua}
+# Agenda
 ${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=18}Agenda${font} ${hr 1}${color}
 Work: ${execpi 1800 gcalcli agenda $(date +"%Y-%m-%dT%H:%M" ) $(date --date "today next day next day next day" +"%Y-%m-%d") --conky --military --color_date green --color_owner green --calendar="company@example.com" | sed "s/）/)/" | sed "s/＠/@/"}
 # Reminder for notification
