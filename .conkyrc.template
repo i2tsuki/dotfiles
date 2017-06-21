@@ -27,6 +27,11 @@ max_user_text 32768
 text_buffer_size 1024
 gap_x 15
 gap_y 13
+# -- Lua
+lua_load /home/kizkoh/.conky.d/github_grass.lua
+lua_draw_hook_pre draw_github_grass_pre
+lua_draw_hook_post draw_github_grass_post
+
 TEXT
 ${color magenta}${font Inconsolata:style=Regular:pixelsize=20}System${font} ${hr 1}${color}
 CPU ${alignr}${freq} MHz
@@ -58,6 +63,10 @@ ${goto 240} mpd_repeat: ${mpd_repeat}
 
 ${goto 240} mpd_status: $mpd_status
 ${goto 240} ${mpd_bar 4,240}
+# Github Grass
+${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=18}Github Grass${font} ${hr 1}${color}
+${voffset 100}
+${execpi 3600 touch /home/kizkoh/.conky.d/github_grass.lua}
 ${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=18}Agenda${font} ${hr 1}${color}
 Work: ${execpi 1800 gcalcli agenda $(date +"%Y-%m-%dT%H:%M" ) $(date --date "today next day next day next day" +"%Y-%m-%d") --conky --military --color_date green --color_owner green --calendar="company@example.com" | sed "s/）/)/" | sed "s/＠/@/"}
 # Reminder for notification
