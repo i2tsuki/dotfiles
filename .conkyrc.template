@@ -50,7 +50,6 @@ ${top name 3} ${top cpu 3} ${top mem 3} ${goto 243} ${top_mem name 3} ${top_mem 
 ${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=18}Hwmon${font} ${hr 1}${color}
 # Hwmon
 CPU ${alignr}${hwmon temp 1} celsius
-# HDD ${alignr}${execi 60 hddtemp /dev/nvme0n1}
 Chip ${alignr}${ibm_fan}rpm
 # Mpd daemon
 ${color magenta}${font Bitstream Vera Sans:style=Roman:pixelsize=18}Mpd daemon${font} ${hr 1}${color}
