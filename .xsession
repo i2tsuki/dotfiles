@@ -10,6 +10,7 @@ exec xcompmgr -n &
 exec blueman-applet &
 exec dropbox &
 exec conky &
+exec parcellite &
 /opt/Symantec/symantec_antivirus/savtray &
 
 exec ${HOME}/.local/bin/mpdcover &
