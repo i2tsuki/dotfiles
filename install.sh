@@ -2,7 +2,7 @@
 
 set -eu
 
-EXCLUDES="Makefile|LICENSE|clean.sh|install.sh|udev.rules|.config|.git|.gitignore|^.$"
+EXCLUDES="Makefile|LICENSE|clean.sh|install.sh|udev.rules|etc|.config|.git|.gitignore|^.$"
 
 # public
 X11ONLY=""
