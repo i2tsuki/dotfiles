@@ -3,7 +3,7 @@
 ;;; Code:
 ;; Fonts configure
 (if window-system (progn
-		    (create-fontset-from-ascii-font "Inconsolata-12:weight=Medium" nil "Inconsolata")
+		    (create-fontset-from-ascii-font "Inconsolata-15:weight=Medium" nil "Inconsolata")
 		    (set-fontset-font "fontset-Inconsolata"
 				      'unicode
 				      (font-spec :family "Ricty Diminished")
