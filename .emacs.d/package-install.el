@@ -38,3 +38,7 @@
 	  (el-get-package (split-string (getenv "EL_GET_PACKAGE") " " t))
 	  )
       (apply el-get-command el-get-package)))
+
+
+;; (el-get-install "terraform-mode")
+;; (el-get-install "go-autocomplete")

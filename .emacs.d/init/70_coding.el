@@ -43,6 +43,10 @@
 (add-to-list 'interpreter-mode-alist '("runscript" . sh-mode))
 (modify-coding-system-alist 'file "\\.\\(ebuild\\|eclass\\|eblit\\)\\'" 'utf-8)
 
+;;; Terraform-mode
+(autoload 'terraform-mode "terraform-mode" "terraform editing mode." t)
+(add-to-list 'auto-mode-alist '("\\.tf$" . terraform-mode))
+
 ;;; Go-mode
 (require 'go-autocomplete)
 (require 'auto-complete-config)
