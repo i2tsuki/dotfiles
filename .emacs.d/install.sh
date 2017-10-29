@@ -53,8 +53,6 @@ done
 # Utilities
 for i in \
     "exec-path-from-shell" \
-    "helm" \
-    "helm-c-yasnippet" \
     "undo-tree" \
     "stripe-buffer" \
     "htmlize" \
