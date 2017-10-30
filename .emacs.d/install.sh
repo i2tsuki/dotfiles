@@ -139,3 +139,7 @@ done
 
 # Handle exception package
 echo "(add-to-list 'load-path (locate-user-emacs-file \"elisp/go-autocomplete/emacs\"))" >> ./load-path.el
+
+# Execute by yourself
+echo '(el-get-install "helm")'
+echo '(el-get-install "helm-c-yasnippet")'
