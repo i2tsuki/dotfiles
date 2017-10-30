@@ -5,6 +5,7 @@ export GDK_SCALE=1.2
 
 exec xbacklight -set 50 &
 
+sleep 1
 exec nitrogen --restore &
 exec xcompmgr -n &
 exec blueman-applet &
