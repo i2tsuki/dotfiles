@@ -2,6 +2,7 @@
 
 # GTK3 Application Scaling
 export GDK_SCALE=1.2
+export XDG_CONFIG_HOME="${HOME}/.config"
 
 exec xbacklight -set 50 &
 
