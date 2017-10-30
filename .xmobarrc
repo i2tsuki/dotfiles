@@ -13,7 +13,10 @@ Config { font = "xft:Ricty-11:bold"
        , border = TopB
        , position = TopW L 90
        , allDesktops = True
+       , overrideRedirect = False
        , lowerOnStart = False
+       , hideOnStart = False
+       , persistent = True
        , commands = [ Run Com "uname" ["-s","-r"] "uname" 36000
                     , Run Network "wlp4s0" ["-L","0","-H","32","--normal","green","--high","red"] 60
                     -- , Run Wireless "wlp4s0" ["-t", "ESSID: <essid> <quality>"] 60
