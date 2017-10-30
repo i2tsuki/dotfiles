@@ -61,7 +61,7 @@ urxvt.boldfont: \
     xft:Symbola:Style=Regular:pixelsize=15 \
 urxvt.letterSpace: 1
 urxvt.lineSpace: 1.16
-urxvt.colorUL: #5
+urxvt.colorUL: pink
 urxvt*termName: xterm-256color
 urxvt*preeditType: OnTheSpot
 urxvt*perl-ext: xim-onthespot
