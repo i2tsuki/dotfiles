@@ -1,6 +1,7 @@
 #!/bin/sh
 alias mkr="${HOME}/.go/bin/mkr"
 
+eval "$(dbus-launch --sh-syntax --exit-with-session)"
 eval "$(gpg-agent)"
 eval "$(ssh-agent)"
 
@@ -26,4 +27,3 @@ export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
 export QT4_IM_MODULE=${QT_IM_MODULE}
-exec fcitx > /dev/null &
