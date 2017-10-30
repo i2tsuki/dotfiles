@@ -4,6 +4,7 @@ import XMonad.Config.Gnome
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.FadeInactive
 import XMonad.Hooks.ManageHelpers (doCenterFloat)
+import XMonad.Hooks.ManageDocks   (ToggleStruts(..),avoidStruts,docks,manageDocks)
 import XMonad.Util.Run (spawnPipe)
 import XMonad.Util.EZConfig
 import XMonad.Util.WorkspaceCompare
@@ -95,47 +96,24 @@ myKeys =
         | (key, sc) <- zip "hl" [0..]
         , (f, m) <- [(W.view, ""), (W.shift, "S-")]]
 
-mylogHook h = dynamicLogWithPP defaultPP {
-              ppOutput = hPutStrLn h
-              }
 tall = Tall 1 (3/100) (1/2)
 
 main :: IO ()
 main = do
-    xmproc <- do
-             spawnPipe "mpd"
-             spawnPipe "xmobar $HOME/.xmobarrc"
-    xmonad $ defaultConfig
-        { -- modMask = mod4Mask
-        workspaces = myWorkspaces
+    xmproc <- spawnPipe "xmobar $HOME/.xmobarrc"
+    xmonad $ docks defaultConfig
+        { modMask = mod1Mask
+        , workspaces = myWorkspaces
         , manageHook = myManageHookShift
                         <+> myManageHookFloat
-                        <+> manageHook gnomeConfig
+                        <+> manageHook defaultConfig
 
-        , layoutHook = smartBorders $ mkToggle1 FULL $ desktopLayoutModifiers (named "V" tall ||| (named "H" $ Mirror tall))
-        -- , layoutHook = mkToggle1 FULL $ smartBorders  $  layoutHook defaultConfig
-        -- xmonad-log-appletの設定
-        , logHook = do
-            -- logHook gnomeConfig
-            -- dynamicLogWithPP $ defaultPP {
-            --              ppOutput   = \ str -> do
-            --                let str'  = "<span font=\"UmePlus P Gothic\" weight=\"bold\">" ++ str ++ "</span>"
-            --                msg <- newSignal "/org/xmonad/Log" "org.xmonad.Log" "Update"
-            --                addArgs msg [String str']
-            --                -- If the send fails, ignore it.
-            --                send dbus msg 0 `catchDyn` (\ (DBus.Error _name _msg) -> return 0)
-            --                return ()
-            --            , ppTitle    = pangoColor "#dd8b10" . shorten 60 . escape
-            --            , ppCurrent  = pangoColor "#dd8b10" . wrap "[" "]"
-            --            , ppVisible  = pangoColor "#006666" . wrap "_" ""
-            --            , ppHidden   = wrap "" ""
-            --            , ppUrgent   = pangoColor "red"
-            --            }
-	    --     	-- updatePointer (Relative 0.9 0.9)
-                   mylogHook xmproc
+        , layoutHook = smartBorders $ avoidStruts $ mkToggle1 FULL $ desktopLayoutModifiers (named "V" tall ||| (named "H" $ Mirror tall))
+        , logHook    = dynamicLogWithPP $ xmobarPP {
+                 ppOutput = hPutStrLn xmproc
+        }
                    -- Deprecated Tansparent Level
                    -- fadeInactiveLogHook 0xdddddddd
-        , modMask = mod1Mask
         , terminal           = "urxvt"
         , borderWidth        = 2
         , normalBorderColor  = "#533333"
