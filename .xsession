@@ -4,8 +4,6 @@
 export GDK_SCALE=1.2
 export XDG_CONFIG_HOME="${HOME}/.config"
 
-exec xbacklight -set 50 &
-
 sleep 1
 exec nitrogen --restore &
 exec xcompmgr -n &
