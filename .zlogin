@@ -2,8 +2,6 @@
 alias mkr="${HOME}/.go/bin/mkr"
 
 eval "$(dbus-launch --sh-syntax --exit-with-session)"
-eval "$(gpg-agent)"
-eval "$(ssh-agent)"
 
 export PATH=${PATH}:/opt/bin:${HOME}/.cabal/bin:${HOME}/.local/bin:${HOME}/.cask/bin:${HOME}/.cargo/bin
 
@@ -27,3 +25,6 @@ export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
 export QT4_IM_MODULE=${QT_IM_MODULE}
+
+# eval "$(gpg-agent)"
+[ -z "${SSH_AGENT_PID}" ] && eval "$(ssh-agent)"
