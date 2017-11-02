@@ -28,6 +28,9 @@ export QT4_IM_MODULE=${QT_IM_MODULE}
 
 # eval "$(gpg-agent)"
 [ -z "${SSH_AGENT_PID}" ] && eval "$(ssh-agent)"
+
+export GDK_SCALE=1.2
+
 export XKB_DEFAULT_OPTIONS=ctrl:nocaps,
 # export GDK_BACKEND=wayland
 # export QT_QPA_PLATFORM=wayland-egl
