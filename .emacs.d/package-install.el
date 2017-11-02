@@ -7,9 +7,9 @@
 (setq el-get-dir (locate-user-emacs-file "elisp"))
 (add-to-list 'load-path (locate-user-emacs-file "elisp"))
 (add-to-list 'load-path (locate-user-emacs-file "elisp/emacs-async"))
+
 (setq el-get-verbose t)
 (setq el-get-default-process-sync t)
-
 ;; See info to enter "C-u M-x info RET" and view "~/.emacs.d/el-get/el-get/el-get.info"
 (setq el-get-sources
       '(
@@ -39,6 +39,11 @@
 	  )
       (apply el-get-command el-get-package)))
 
+(if
+    (eq (getenv "EL_GET_PACKAGE") "helm")
+    (
+     (print "Please self installation for helm")
+     ))
 
 ;; (el-get-install "terraform-mode")
 ;; (el-get-install "go-autocomplete")
