@@ -1,8 +1,8 @@
 #!/bin/sh
 alias mkr="${HOME}/.go/bin/mkr"
 
-export PATH=${PATH}:/opt/bin:${HOME}/.cabal/bin:{HOME}/.cask/bin:${HOME}/.cargo/bin
-export PATH=${HOME}/.local/bin:${PATH}
+export PATH=${PATH}:/opt/bin:${HOME}/.cabal/bin:{HOME}/.cask/bin
+export PATH=${HOME}/.local/bin:${HOME}/.cargo/bin:${PATH}
 
 export XDG_DATA_HOME=$HOME/.cache
 export XDG_CACHE_HOME=$HOME/.cache
