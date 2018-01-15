@@ -113,6 +113,7 @@ for i in \
     "lua-mode" \
     "company-ghc" \
     "php-mode" \
+    "prettier-js" \
     "rust-mode" \
     "flycheck-rust" \
     "rust-racer"

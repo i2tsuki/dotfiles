@@ -76,6 +76,11 @@
 	    (setq indent-tabs-mode nil)
 	    (defvar c-basic-offset 4)))
 
+;;; Javascript-mode
+(require 'prettier-js)
+(add-hook 'js2-mode-hook 'prettier-js-mode)
+(add-hook 'web-mode-hook 'prettier-js-mode)
+
 ;;; Perl-mode
 (autoload 'cperl-mode "cperl-mode" "alternate mode for editing Perl programs" t)
 (add-to-list 'auto-mode-alist '("\.\([pP][Llm]\|al\|t\|cgi\)\'" . cperl-mode))
