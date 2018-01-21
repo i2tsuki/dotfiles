@@ -13,6 +13,7 @@ PATH=${PATH}:~/.cabal/bin
 PATH=${PATH}:~/.cargo/bin
 PATH=${PATH}:~/node_modules/.bin
 PATH=${PATH}:~/.rbenv/bin
+PATH=${PATH}:~/Android/Sdk/platform-tools
 
 which rbenv > /dev/null && eval "$(rbenv init -)"
 
