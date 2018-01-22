@@ -1,3 +1,4 @@
+# -*- mode:conf -*-
 bind status P !git push origin %(branch)
 bind status R !rm -iv %(file)
 bind status c !git commit
@@ -7,3 +8,44 @@ bind main d !?git branch -d %(branch)
 bind main p !git pull
 bind main P !git push origin %(branch)
 
+# Ctrl-v, Alt-v でページ単位移動する
+bind generic <Ctrl-v> move-page-down
+bind generic <Esc>v move-page-up
+
+# Ctrl-r でリフレッシュする
+bind generic <Ctrl-r> refresh
+
+# View mode config
+set pager-view  = line-number:yes,interval=1 text
+set stage-view  = line-number:yes,interval=1 text
+set log-view    = line-number:yes,interval=1 text
+set blob-view   = line-number:yes,interval=1 text
+set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+
+# 縦分割にする
+set vertical-split = no
+
+# utf-8 文字で画面描画する
+set line-graphics = utf-8
+
+set tab-size = 4
+
+# 検索時に大文字小文字を無視する
+set ignore-case = true
+
+# 水平分割したウィンドウの下画面サイズを % で指定する
+set split-view-height = 80%
+
+# マージ diff を表示する
+set diff-options = -m --first-parent
+
+# リフレッシュするタイミングを指定する
+set refresh-mode = auto
+
+# 差分表示に diff-highlight を使う
+set diff-highlight = true
+
+# Color config
+# diff-view で境界が見やすくなるように変更する
+color  diff-header       default magenta
+color  diff-chunk        black   white
