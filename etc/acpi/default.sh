@@ -20,7 +20,7 @@ case "$group" in
 	button)
 		case "$action" in
 			power)
-				/etc/acpi/actions/powerbtn.sh
+				# /etc/acpi/actions/powerbtn.sh
 				;;
 
 			# if your laptop doesnt turn on/off the display via hardware
@@ -36,14 +36,14 @@ case "$group" in
 					close)
 						hibernate-ram
 						;;
-					open) 
+					open)
 						su kizkoh -c /usr/bin/xtrlock &
 						;;
 					*) uhd $*;;
 				esac
 				;;
-			
-			volumeup) 
+
+			volumeup)
 				$amixer 5dB+
 				;;
 			volumedown)
@@ -79,7 +79,7 @@ case "$group" in
 			brightnessup)
 				/usr/bin/xbacklight +10
 				;;
-			*)	
+			*)
 				log_unhandled $*
 				;;
 		esac
