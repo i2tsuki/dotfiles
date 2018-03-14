@@ -7,4 +7,5 @@ xmodmap ~/.Xmodmap
 
 exec xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" 1 &
 exec xinput set-ptr-feedback "SynPS/2 Synaptics TouchPad" 8 2 1 &
-/etc/X11/Sessions/i3wm
+# /etc/X11/Sessions/bspwm
+exec /usr/bin/spectrwm
