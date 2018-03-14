@@ -1,10 +1,6 @@
 set $mod Mod1
 
-font pango:Ricty 0
-
 focus_follows_mouse yes
-
-# force_xinerama yes
 
 # Home row direction keys, like vim
 set $left h
@@ -21,161 +17,179 @@ set $locker "xtrlock"
 
 floating_modifier $mod
 
+#
+# Borders:
+#
+new_window pixel 4
+new_float pixel 4
+
+client.focused #FF9500 #FF9500 #FF9500 #FF9500 #FF9500
+
+#
+# Gaps:
+#
+gaps inner 0
+gaps outer 0
+
 ### Input configuration
-#
-# Example configuration:
-#
-  ### The following configuration is sway only
-  # input "2:10:TPPS/2_IBM_TrackPoint" {
-  #     dwt enabled
-  #     tap enabled
-  #     natural_scroll disabled
-  #     middle_emulation enabled
-  # }
+### The following configuration is sway only
+# input "2:10:TPPS/2_IBM_TrackPoint" {
+#     dwt enabled
+#     tap enabled
+#     natural_scroll disabled
+#     middle_emulation enabled
+# }
 
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-### Key bindings
-    bindsym $mod+Shift+Return exec $term
+#
+# Key bindings:
+#
+bindsym $mod+Shift+Return exec $term
 
-    bindsym $mod+Shift+c kill
-    bindsym $mod+Shift+r reload
-    bindsym $mod+Shift+q exit
+bindsym $mod+Shift+c kill
+bindsym $mod+Shift+r reload
+bindsym $mod+Shift+q exit
 
-    bindsym $mod+p exec $menu
+bindsym $mod+p exec $menu
+
+#
+# Focus change:
+#
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
+
+bindsym $mod+shift+h move output eDP-1
+bindsym $mod+shift+l move output DP-1
 
 #
 # Moving around:
 #
-    # _move_ the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
-    # ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move right
+# bindsym $mod+Shift+h move left
+# bindsym $mod+Shift+j move down
+# bindsym $mod+Shift+k move up
+# bindsym $mod+Shift+l move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+#
+# Layout:
+#
+bindsym $mod+Space split h
+bindsym $mod+Shift+Space split v
+bindsym $mod+f fullscreen
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+t floating toggle
+bindsym $mod+a focus parent
+bindsym Mod1+d focus child
+
+bindsym Mod1+Shift+minus move scratchpad
+bindsym Mod1+minus scratchpad show
+
 #
 # Workspaces:
 #
-    # name workspaces
-    set $ws_web     1:Web
-    set $ws_emacs   2:Emacs
-    set $ws_vscode  3:VSCode
-    set $ws_term    4:Term
-    set $ws_file    5:File
-    set $ws_mail    6:Mail
-    set $ws_slack   7:Slack
-    set $ws_media   8:Media
-    set $ws_keepass 9:Keepass
-    set $ws_virt    10:VirtualBox
 
-    # switch to workspace
-    bindsym $mod+1 workspace $ws_web
-    bindsym $mod+2 workspace $ws_emacs
-    bindsym $mod+3 workspace $ws_vscode
-    bindsym $mod+4 workspace $ws_term
-    bindsym $mod+5 workspace $ws_file
-    bindsym $mod+6 workspace $ws_mail
-    bindsym $mod+7 workspace $ws_slack
-    bindsym $mod+8 workspace $ws_media
-    bindsym $mod+9 workspace $ws_keepass
-    bindsym $mod+0 workspace $ws_virt
-    # move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace $ws_web
-    bindsym $mod+Shift+2 move container to workspace $ws_emacs
-    bindsym $mod+Shift+3 move container to workspace $ws_vscode
-    bindsym $mod+Shift+4 move container to workspace $ws_term
-    bindsym $mod+Shift+5 move container to workspace $ws_file
-    bindsym $mod+Shift+6 move container to workspace $ws_mail
-    bindsym $mod+Shift+7 move container to workspace $ws_slack
-    bindsym $mod+Shift+8 move container to workspace $ws_media
-    bindsym $mod+Shift+9 move container to workspace $ws_keepass
-    bindsym $mod+Shift+0 move container to workspace $ws_virt
+# name of workspaces
+set $ws_1  1 
+set $ws_2  2 
+set $ws_3  3 
+set $ws_4  4 
+set $ws_5  5 
+set $ws_6  6 
+set $ws_7  7 
+set $ws_8  8 
+set $ws_9  9 
+set $ws_10 10 
 
-    # Floating window
-    for_window [class="trayer"] floating enable; border none; sticky enable
-    for_window [title="xfce4-notifyd"] floating enable; border none; sticky enable; focus mode_toggle
-    for_window [class="Dunst"] floating enable; border none; sticky enable; focus mode_toggle
+# switch to workspace
+bindsym $mod+1 workspace $ws_1
+bindsym $mod+2 workspace $ws_2
+bindsym $mod+3 workspace $ws_3
+bindsym $mod+4 workspace $ws_4
+bindsym $mod+5 workspace $ws_5
+bindsym $mod+6 workspace $ws_6
+bindsym $mod+7 workspace $ws_7
+bindsym $mod+8 workspace $ws_8
+bindsym $mod+9 workspace $ws_9
+bindsym $mod+0 workspace $ws_10
 
-    # Assign workspace
-    assign [class="^Firefox$"]                → $ws_web
-    assign [class="^Google-chrome-unstable$"] → $ws_web
-    assign [class="^Emacs$"]                  → $ws_emacs
-    assign [class="^URxvt$"]                  → $ws_term
-    assign [class="^Code$"]                   → $ws_vscode
-    assign [class="^Thunar$"]                 → $ws_file
-    assign [class="^Slack$"]                  → $ws_slack
-    assign [class="^Thunderbird$"]            → $ws_mail
-    assign [class="^Eom$"]                    → $ws_media
-    assign [class="^Gimp$"]                   → $ws_media
-    assign [class="^keepassxc$"]              → $ws_keepass
-    assign [class="^VirtualBox$"]             → $ws_virt
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws_1
+bindsym $mod+Shift+2 move container to workspace $ws_2
+bindsym $mod+Shift+3 move container to workspace $ws_3
+bindsym $mod+Shift+4 move container to workspace $ws_4
+bindsym $mod+Shift+5 move container to workspace $ws_5
+bindsym $mod+Shift+6 move container to workspace $ws_6
+bindsym $mod+Shift+7 move container to workspace $ws_7
+bindsym $mod+Shift+8 move container to workspace $ws_8
+bindsym $mod+Shift+9 move container to workspace $ws_9
+bindsym $mod+Shift+0 move container to workspace $ws_10
 
-    bindsym Mod4+l exec --no-startup-id $locker, mode "default"
-    bindsym Mod4+Shift+space exec --no-startup-id thunar "./Downloads", mode "default"
+# floating window
+for_window [class="trayer"] floating enable; border none; sticky enable
+for_window [title="xfce4-notifyd"] floating enable; border none; sticky enable; focus mode_toggle
+for_window [class="Dunst"] floating enable; border none; sticky enable; focus mode_toggle
+for_window [class="Gimp"] floating enable; border none; sticky enable; focus mode_toggle
 
-    # mode "passthrough" {
-    #     bindsym $mod+v mode "default"
-    # }
+# assign workspace
+assign [class="^Firefox$"]                → $ws_1
+assign [class="^Google-chrome-unstable$"] → $ws_1
+assign [class="^Emacs$"]                  → $ws_2
+assign [class="^Code$"]                   → $ws_3
+assign [class="^URxvt$"]                  → $ws_4
+assign [class="^Thunar$"]                 → $ws_5
+assign [class="^Thunderbird$"]            → $ws_6
+assign [class="^Slack$"]                  → $ws_7
+assign [class="^Eom$"]                    → $ws_8
+assign [class="^Gimp$"]                   → $ws_8
+assign [class="^keepassxc$"]              → $ws_9
+assign [class="^VirtualBox$"]             → $ws_10
 
-    # bindsym $mod+v mode "passthrough"
 #
-# Layout stuff:
+# Application shortcuts:
 #
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
-    bindsym $mod+b splith
+bindsym Mod4+l exec --no-startup-id $locker, mode "default"
+bindsym Mod4+Shift+space exec --no-startup-id thunar "./Downloads", mode "default"
 
-    # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+e layout toggle split
-
-    bindsym $mod+f fullscreen
-
-    # Toggle the current focus between tiling and floating mode
-    bindsym $mod+t floating toggle
-    bindsym $mod+a focus parent
 #
-# Scratchpad:
+# Passthrough mode:
 #
-    # Sway has a "scratchpad", which is a bag of holding for windows.
-    # You can send windows there and get them back later.
+mode "passthrough" {
+    bindsym $mod+z mode "default"
+}
 
-    # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
-
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
-
-    # floating_minimum_size 96 x 20
-
-    client.focused #FF9500 #FF9500 #FF9500 #FF9500 #FF9500
+bindsym $mod+z mode "passthrough"
 
 #
 # Resizing containers:
 #
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
-    bindsym $left resize shrink width 5 px or 5 ppt
-    bindsym $down resize grow height 5 px or 5 ppt
-    bindsym $up resize shrink height 5 px or 5 ppt
-    bindsym $right resize grow width 5 px or 5 ppt
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
 
-    # ditto, with arrow keys
-    bindsym Left resize shrink width 5 px or 5 ppt
-    bindsym Down resize grow height 5 px or 5 ppt
-    bindsym Up resize shrink height 5 px or 5 ppt
-    bindsym Right resize grow width 5 px or 5 ppt
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
     # return to default mode
     bindsym Return mode "default"
@@ -184,34 +198,60 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #
+# Display mode:
+#
+set $mode_display Ext Screen (d) DP ON, (f) DP OFF
+mode "$mode_display" {
+    bindsym d exec --no-startup-id xrandr --output DP-1 --auto --right-of eDP-1 --primary --right-of DP-1, mode "default"
+    bindsym f exec --no-startup-id xrandr --output DP-1 --auto --off, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+x mode "$mode_display"
+
+#
 # Status Bar:
 #
-bar {
-    status_command ~/.local/bin/i3status-rs ~/.config/i3/status.toml
-    # pango_markup enabled
-    font pango:Inconsolata 15
-    id 0
-    position top
-    separator_symbol " "
-    tray_output eDP-1
-    colors {
-        separator #666666
-        background #323232
-        statusline #dddddd
-        focused_workspace #0088CC #0088CC #ffffff
-        active_workspace #333333 #333333 #ffffff
-        inactive_workspace #333333 #333333 #888888
-        urgent_workspace #2f343a #900000 #ffffff
-    }
-}
+# bar {
+#     status_command ~/.local/bin/i3status-rs ~/.config/i3/status.toml
+#     # pango_markup enabled
+#     font pango:Inconsolata 15
+#     id 0
+#     position top
+#     separator_symbol " "
+#     tray_output primary
+#     colors {
+#         separator #666666
+#         background #323232
+#         statusline #dddddd
+#         focused_workspace #0088CC #0088CC #ffffff
+#         active_workspace #333333 #333333 #ffffff
+#         inactive_workspace #333333 #333333 #888888
+#         urgent_workspace #2f343a #900000 #ffffff
+#     }
+# }
 
 exec --no-startup-id /home/kizkoh/.local/bin/mpdcover
 exec --no-startup-id /home/kizkoh/.local/bin/dropbox
 exec --no-startup-id /usr/bin/compton --backend GLX --vsync opengl --glx-no-stencil --glx-copy-from-front --glx-use-copysubbuffermesa --glx-no-rebind-pixmap --glx-use-gpushader4
-exec --no-startup-id /usr/bin/conky
+exec --no-startup-id /usr/bin/conky -c ~/.conkyrc
 exec --no-startup-id /usr/lib64/xfce4/notifyd/xfce4-notifyd
-exec --no-startup-id /usr/bin/nitrogen --restore
 exec --no-startup-id /usr/bin/mpd
 exec --no-startup-id /usr/bin/dex -a -s "/home/kizkoh/.config/autostart"
+exec --no-startup-id /usr/bin/nitrogen --restore
 
+#
+# Polybar:
+#
+exec_always --no-startup-id killall polybar; polybar top &
+# exec_always --no-startup-id killall polybar; polybar bottom &
+gaps inner 6
+gaps outer 6
+
+
+
+
+### The following configuration is sway only
 # include /etc/sway/config.d/*
