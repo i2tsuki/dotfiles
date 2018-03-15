@@ -10,6 +10,14 @@ exec 2>&1
 
 # rm -rf ./elpa ./elisp
 
+cd $(dirname $(readlink -f ./install.sh))
+if [ -d ./el-get ] ; then
+    ( cd ./el-get && git pull )
+else
+    echo "Please git clone el-get (exit 1)"
+    exit 1
+fi
+
 export EL_GET_COMMAND="el-get-install"
 
 CMD="emacs --batch -q -l ~/.emacs.d/package-install.el"
