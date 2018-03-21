@@ -39,11 +39,5 @@
 	  )
       (apply el-get-command el-get-package)))
 
-(if
-    (eq (getenv "EL_GET_PACKAGE") "helm")
-    (
-     (print "Please self installation for helm")
-     ))
-
 ;; (el-get-install "terraform-mode")
 ;; (el-get-install "go-autocomplete")

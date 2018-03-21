@@ -45,6 +45,7 @@ done
 # Helm
 PKGS=(
     "helm"
+    "helm-config"
     "helm-c-yasnippet"
 )
 for i in ${PKGS}
