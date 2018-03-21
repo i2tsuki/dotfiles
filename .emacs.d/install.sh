@@ -29,44 +29,52 @@ do
 done
 
 # Auto completion
-for i in \
-    "fuzzy" \
-    "auto-complete" \
-    "popup" \
-    "pos-tip" \
-    "company-mode" \
+PKGS=(
+    "fuzzy"
+    "auto-complete"
+    "popup"
+    "pos-tip"
+    "company-mode"
     "company-quickhelp"
+)
+for i in ${PKGS}
 do
     EL_GET_PACKAGE=$i $CMD
 done
 
 # Appearance
-for i in \
-    "color-theme" \
-    "smooth-scroll" \
-    "powerline" \
-    "nyan-mode" \
-    "popwin"
+PKGS=(
+   "color-theme"
+   "smooth-scroll"
+   "powerline"
+   "nyan-mode"
+   "popwin"
+)
+for i in ${PKGS}
 do
     EL_GET_PACKAGE=$i $CMD
 done
 
 # Input Method
-for i in \
+PKGS=(
     "migemo"
+)
+for i in ${PKGS}
 do
     EL_GET_PACKAGE=$i $CMD
 done
 
 # Utilities
-for i in \
-    "exec-path-from-shell" \
-    "undo-tree" \
-    "stripe-buffer" \
-    "htmlize" \
-    "yasnippet" \
-    "yascroll" \
+PKGS=(
+    "exec-path-from-shell"
+    "undo-tree"
+    "stripe-buffer"
+    "htmlize"
+    "yasnippet"
+    "yascroll"
     "zlc"
+)
+for i in ${PKGS}
 do
     EL_GET_PACKAGE=$i $CMD
 done
@@ -104,40 +112,44 @@ if (which ebuild > /dev/null) ; then
 fi
 
 # Config mode
-for  i in \
-    "dockerfile-mode" \
+PKGS=(
+    "dockerfile-mode"
     "nginx-mode"
+)
+for i in ${PKGS}
 do
     EL_GET_PACKAGE=$i $CMD
 done
 
 # Coding
-for i in \
-    "company-irony" \
-    "irony-mode" \
-    "cperl-mode" \
-    "elpy" \
-    "go-mode" \
-    "go-autocomplete" \
-    "go-eldoc" \
-    "groovy-emacs-mode" \
-    "haskell-mode" \
-    "lua-mode" \
-    "company-ghc" \
-    "php-mode" \
-    "prettier-js" \
-    "rust-mode" \
-    "flycheck-rust" \
+PKGS=(
+    "company-irony"
+    "irony-mode"
+    "elpy"
+    "go-mode"
+    "go-autocomplete"
+    "go-eldoc"
+    "groovy-emacs-mode"
+    "haskell-mode"
+    "lua-mode"
+    "company-ghc"
+    "php-mode"
+    "prettier-js"
+    "rust-mode"
+    "flycheck-rust"
     "rust-racer"
+)
+for i in ${PKGS}
 do
     EL_GET_PACKAGE=$i $CMD
 done
 
 # User definition
-for i in \
-    "text-adjust" \
-    "mell" \
-    "ox-hatena"
+PKGS=(
+    "text-adjust"
+    "mell"
+)
+for i in ${PKGS}
 do
     EL_GET_PACKAGE=$i $CMD
 done
