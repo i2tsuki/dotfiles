@@ -98,10 +98,14 @@ done
 # auctex のビルドには pdftex が必要
 # EL_GET_PACKAGE="auctex" $EL_GET_INSTALL_CMD
 
+# ebuild-mode is installed only when ebuild command is available
+if (which ebuild > /dev/null) ; then
+    EL_GET_PACKAGE="ebuild-mode" $CMD
+fi
+
 # Config mode
 for  i in \
     "dockerfile-mode" \
-    "ebuild-mode" \
     "nginx-mode"
 do
     EL_GET_PACKAGE=$i $CMD
