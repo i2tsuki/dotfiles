@@ -14,6 +14,11 @@ PATH=${PATH}:~/.cargo/bin
 PATH=${PATH}:~/node_modules/.bin
 PATH=${PATH}:~/.rbenv/bin
 PATH=${PATH}:~/Android/Sdk/platform-tools
+# for OSX (homebrew)
+if [ "$(uname)" = "Darwin" ] ; then
+    PATH=/usr/local/bin:${PATH}
+    PATH=${PATH}:~/Library/Python/3.6/bin
+fi
 
 which rbenv > /dev/null && eval "$(rbenv init -)"
 
