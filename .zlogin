@@ -27,7 +27,7 @@ export QT_IM_MODULE="fcitx"
 export QT4_IM_MODULE=${QT_IM_MODULE}
 
 # eval "$(gpg-agent)"
-[ -z "${SSH_AGENT_PID}" ] && eval "$(ssh-agent)"
+[ -z "${SSH_AGENT_PID}" -a -z "${SSH_AUTH_SOCK}" ] && eval "$(ssh-agent)"
 
 export GDK_SCALE=1.2
 
