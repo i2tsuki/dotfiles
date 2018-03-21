@@ -19,3 +19,10 @@ alias ecc="emacsclient -nw"
 alias gck="git checkout"
 alias gcb="git-current-branch"
 alias gp="git-pull"
+
+# open
+if (which open > /dev/null) ; then
+    alias vscode="open -a \"Visual Studio Code\""
+else
+    alias vscode="visual-studio-code"
+fi
