@@ -29,6 +29,7 @@ else
 fi
 
 # .config
+mkdir -pv ${HOME}/.config
 for file in $(find .config -mindepth 1 -maxdepth 1 -type d)
 do
     ln -sfv $(readlink -f $file) ${HOME}/.config/
