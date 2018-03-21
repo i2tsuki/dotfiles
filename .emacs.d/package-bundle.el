@@ -11,7 +11,6 @@
 
 (el-get-bundle elpa:ddskk)
 (el-get-bundle elpa:color-theme-github)
-(el-get-bundle elpa:concurrent)
 (el-get-bundle elpa:company-racer)
 
 ;; Before executing the following command install clang package
