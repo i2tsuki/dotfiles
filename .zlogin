@@ -39,4 +39,4 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 # export QT_WAYLAND_FORCE_DPI=120
 # export SDL_VIDEODRIVER=wayland
 # export CLUTTER_PAINT=disable-clipped-redraws:disable-culling
-/bin/true
+true
