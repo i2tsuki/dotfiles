@@ -56,6 +56,7 @@ done
 # Appearance
 PKGS=(
    "color-theme"
+   "color-theme-github"
    "smooth-scroll"
    "powerline"
    "nyan-mode"

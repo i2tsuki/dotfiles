@@ -21,9 +21,9 @@
 	     :type http
 	     :url "http://rubikitch.com/f/mell.el"
 	     )
-	(:name ox-hatena
+	(:name color-theme-github
 	     :type http
-	     :url "https://raw.githubusercontent.com/akisute3/ox-hatena/master/ox-hatena.el"
+	     :url "https://raw.githubusercontent.com/dudleyf/color-theme-github/master/color-theme-github.el"
 	     )
 	))
 

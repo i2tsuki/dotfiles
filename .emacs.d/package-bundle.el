@@ -10,7 +10,6 @@
 (setq el-get-default-process-sync t)
 
 (el-get-bundle elpa:ddskk)
-(el-get-bundle elpa:color-theme-github)
 
 ;; Before executing the following command install clang package
 ;; (irony-install-server "cmake -DCMAKE_INSTALL_PREFIX\=/home/kinoo/.emacs.d/irony/ /home/kinoo/.emacs.d/elisp/irony-mode/server && cmake --build . --use-stderr --config Release --target install")
