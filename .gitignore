@@ -14,5 +14,6 @@ secrets/
 .config/Thunar/renamerrc
 
 .emacs.d/el-get
+.emacs.d/themes
 
 *\~
