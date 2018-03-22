@@ -55,8 +55,6 @@ done
 
 # Appearance
 PKGS=(
-   "color-theme"
-   "color-theme-github"
    "smooth-scroll"
    "powerline"
    "nyan-mode"
@@ -176,3 +174,7 @@ done
 
 # Handle exception package
 echo "(add-to-list 'load-path (locate-user-emacs-file \"elisp/go-autocomplete/emacs\"))" >> ./load-path.el
+
+mkdir -pv ${HOME}/.emacs.d/themes
+curl https://raw.githubusercontent.com/dudleyf/color-theme-github/master/color-theme-github.el -o ${HOME}/.emacs.d/themes/github-theme.el
+echo "(add-to-list 'custom-theme-load-path (locate-user-emacs-file \"themes\"))" >> ./load-path.el

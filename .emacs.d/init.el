@@ -40,6 +40,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(company-idle-delay nil)
+ '(custom-safe-themes
+   (quote
+    ("dc758223066a28f3c6ef6c42c9136bf4c913ec6d3b710794252dc072a3b92b14" default)))
  '(package-selected-packages
    (quote
     (company-racer ox-qmd concurrent color-theme-github ddskk)))
