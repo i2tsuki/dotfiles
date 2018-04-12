@@ -10,6 +10,23 @@
 (set-face-foreground 'git-gutter-fr:added    "lightgreen")
 (set-face-foreground 'git-gutter-fr:deleted  "white")
 
+  (eval-after-load 'git-gutter
+    '(progn
+       ;;; Jump between hunks
+       (global-set-key (kbd "C-x n") 'git-gutter:next-hunk)
+       (global-set-key (kbd "C-x p") 'git-gutter:previous-hunk)
+
+       ;;; Act on hunks
+       (global-set-key (kbd "C-x v =") 'git-gutter:show-hunk)
+       (global-set-key (kbd "C-x r") 'git-gutter:revert-hunks)
+       ;; Stage hunk at point.
+       ;; If region is active, stage all hunk lines within the region.
+       (global-set-key (kbd "C-x t") 'git-gutter:stage-hunks)
+       (global-set-key (kbd "C-x c") 'git-gutter:commit)
+       (global-set-key (kbd "C-x C") 'git-gutter:stage-and-commit)
+       (global-set-key (kbd "C-x C-y") 'git-gutte:stage-and-commit-whole-buffer)
+       (global-set-key (kbd "C-x U") 'git-gutter:unstage-whole-buffer)))
+
 ;;; Flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 ;; (eval-after-load 'flycheck
