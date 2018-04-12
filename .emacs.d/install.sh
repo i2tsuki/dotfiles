@@ -59,9 +59,13 @@ PKGS=(
    "powerline"
    "nyan-mode"
    "popwin"
+   "git-commit-mode"
+   "git-gutter"
+   "git-gutter-fringe"
 )
-for i in ${PKGS}
+for i in ${PKGS[*]}
 do
+    echo $i
     EL_GET_PACKAGE=$i $CMD
 done
 

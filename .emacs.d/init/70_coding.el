@@ -1,6 +1,15 @@
 ;;; 70_coding.el - Mode configure in coding
 
 ;;; Code:
+
+;;; Git Gutter
+(require 'git-gutter-fringe)
+(global-git-gutter-mode)
+
+(set-face-foreground 'git-gutter-fr:modified "yellow")
+(set-face-foreground 'git-gutter-fr:added    "lightgreen")
+(set-face-foreground 'git-gutter-fr:deleted  "white")
+
 ;;; Flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 ;; (eval-after-load 'flycheck
