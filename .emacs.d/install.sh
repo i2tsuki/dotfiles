@@ -12,7 +12,7 @@ exec 2>&1
 
 cd $(dirname $(readlink -f ./install.sh))
 if [ -d ./el-get ] ; then
-    ( cd ./el-get && git pull )
+    ( cd ./el-get && git pull origin master)
 else
     echo "Please git clone el-get (exit 1)"
     exit 1
@@ -37,7 +37,7 @@ PKGS=(
     "company-mode"
     "company-quickhelp"
 )
-for i in ${PKGS}
+for i in ${PKGS[*]}
 do
     EL_GET_PACKAGE=$i $CMD
 done
@@ -48,7 +48,7 @@ PKGS=(
     "helm-config"
     "helm-c-yasnippet"
 )
-for i in ${PKGS}
+for i in ${PKGS[*]}
 do
     EL_GET_PACKAGE=$i $CMD
 done
@@ -62,6 +62,7 @@ PKGS=(
    "git-commit-mode"
    "git-gutter"
    "git-gutter-fringe"
+   "magit"
 )
 for i in ${PKGS[*]}
 do
@@ -73,7 +74,7 @@ done
 PKGS=(
     "migemo"
 )
-for i in ${PKGS}
+for i in ${PKGS[*]}
 do
     EL_GET_PACKAGE=$i $CMD
 done
@@ -88,14 +89,7 @@ PKGS=(
     "yascroll"
     "zlc"
 )
-for i in ${PKGS}
-do
-    EL_GET_PACKAGE=$i $CMD
-done
-
-# mew
-for i in \
-    "mew"
+for i in ${PKGS[*]}
 do
     EL_GET_PACKAGE=$i $CMD
 done
@@ -130,7 +124,7 @@ PKGS=(
     "dockerfile-mode"
     "nginx-mode"
 )
-for i in ${PKGS}
+for i in ${PKGS[*]}
 do
     EL_GET_PACKAGE=$i $CMD
 done
@@ -153,7 +147,7 @@ PKGS=(
     "flycheck-rust"
     "rust-racer"
 )
-for i in ${PKGS}
+for i in ${PKGS[*]}
 do
     EL_GET_PACKAGE=$i $CMD
 done
@@ -163,7 +157,7 @@ PKGS=(
     "text-adjust"
     "mell"
 )
-for i in ${PKGS}
+for i in ${PKGS[*]}
 do
     EL_GET_PACKAGE=$i $CMD
 done
