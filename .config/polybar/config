@@ -17,9 +17,9 @@ width = 100%
 height = 24
 dpi = 96
 
-modules-left = ewmh
-modules-center = title
-modules-right = cpu memory essid volume backlight battery date
+modules-left = bspwm title
+modules-center = cpu memory
+modules-right = essid volume backlight battery date
 
 background = #00000000
 
@@ -39,15 +39,15 @@ font-0 = FontAwesome:pixelsize=15;0
 font-1 = Inconsolata:fontformat=truetype:size=15:antialias=true;0
 font-2 = Ricty Diminished:fontformat=truetype:size=15:antialias=true;0
 
-tray-background = #00000000
+tray-background = #000000
 tray-detached = false
 tray-maxsize = 16
-tray-offset-x = 1
-tray-offset-y = -1
+tray-offset-x = 0
+tray-offset-y = -2
 tray-position = right
 tray-padding = 3
 tray-scale = 1.0
-tray-transparent = true
+tray-transparent = false
 
 offset-x = 0
 offset-y = 3
@@ -67,7 +67,7 @@ width = 100%
 height = 24
 dpi = 96
 
-modules-left = ewmh
+modules-left = bspwm
 modules-center = title
 modules-right = cpu memory essid volume backlight battery date
 
@@ -77,8 +77,7 @@ overline-size = 2
 underline-size = 2
 underline-color = #FF0000
 
-border-bottom-size =
-0
+border-bottom-size = 0
 spacing = 3
 padding-left = 0
 padding-right = 0
@@ -88,6 +87,15 @@ module-margin-right = 0
 font-0 = FontAwesome:pixelsize=15;0
 font-1 = Inconsolata:fontformat=truetype:size=15:antialias=true;0
 font-2 = Ricty Diminished:fontformat=truetype:size=15:antialias=true;0
+
+tray-background = #000000
+tray-detached = false
+tray-maxsize = 16
+tray-offset-x = 1
+tray-offset-y = -2
+tray-position = right
+tray-padding = 3
+tray-scale = 1.0
 
 offset-x = 0
 offset-y = 3
@@ -191,7 +199,7 @@ format-foreground = #FF
 format-padding = 4
 
 label = %title%
-label-maxlen = 31
+label-maxlen = 29
 
 [module/cpu]
 type = internal/cpu
