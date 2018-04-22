@@ -31,7 +31,8 @@
   (set-face-foreground 'mode-line-inactive "gray30")
   (set-face-background 'mode-line-inactive "gray85")
 ))
-(load-theme 'github t t)
+;; (load-theme 'github t t)
+(load-theme 'challenger-deep t t)
 
 ;; Stripe buffer
 (require 'stripe-buffer)

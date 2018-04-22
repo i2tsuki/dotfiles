@@ -175,4 +175,5 @@ echo "(add-to-list 'load-path (locate-user-emacs-file \"elisp/go-autocomplete/em
 
 mkdir -pv ${HOME}/.emacs.d/themes
 curl https://raw.githubusercontent.com/dudleyf/color-theme-github/master/color-theme-github.el -o ${HOME}/.emacs.d/themes/github-theme.el
+curl -L https://raw.githubusercontent.com/challenger-deep-theme/emacs/master/challenger-deep-theme.el -o ${HOME}/.emacs.d/themes/challenger-deep-theme.el
 echo "(add-to-list 'custom-theme-load-path (locate-user-emacs-file \"themes\"))" >> ./load-path.el
