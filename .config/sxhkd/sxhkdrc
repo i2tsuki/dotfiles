@@ -4,7 +4,7 @@
 alt + {_,shift + }Return
       urxvt
 
-alt + d
+alt + p
       /usr/bin/dmenu_run -fn "Inconsolata-16" -nb "black" -nf "orange" -sb "black" -sf "red"
 
 alt + r
@@ -19,32 +19,30 @@ alt + shift + q
 alt + shift + c
       bspc node -c
 
-alt + shift + {n,p}
-      DESK=$(bspc query -D -d focused); \
-      bspc desktop ${DESK} -s {next,prev}; \
-      bspc desktop -f ${DESK}
+#
+# close desktop & monitor
+#
+
+alt + shift + e
+    bspc desktop -r
+
+alt + shift + w
+    bspc monitor -r
 
 # send the newest marked node to the newest preselected node
 alt + y
       bspc node newest.marked.local -n newest.!automatic.local
 
-# swap the current node and the biggest node
-alt + m
-      bspc node -s biggest
-
 #
 # state/flags
 #
-alt + {t,shift + t,s,f}
+alt + {t,shift +s,shift + t,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # # set the node flags
 # super + ctrl + {m,x,y,z}
 # 	bspc node -g {marked,locked,sticky,private}
 
-#
-# focus/swap
-#
 alt + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
@@ -52,26 +50,37 @@ alt + {_,shift + }{h,j,k,l}
 alt + {a,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-alt + {_,shift + }Tab
-	bspc monitor -f {next,prev}
+#
+# move node
+#
+alt + bracket{left,right}
+      bspc desktop -f {prev,next}
 
-alt + {n,p}
-      bspc desktop -f {next,prev}.local
+alt + shift + bracket{left,right}
+      bspc node -d {prev,next}
 
+alt + ctrl + bracket{left,right}
+      bspc node -m {prev,next}
+
+#
+# move desktop
+#
 super + bracket{left,right}
-	bspc monitor -f {prev,next}
+      bspc monitor -f {prev,next}
 
 super + shift + bracket{left,right}
-      NODE=$(bspc query -N -d focused); \
-      bspc node -m {prev,next}; \
-      bspc monitor -f {prev,next}; \
-      bspc node -f ${NODE}
+      DESK=$(bspc query -D -d focused); \
+      bspc desktop ${DESK} -d {prev,next}; \
+      bspc desktop -f ${DESK}
+
+super + ctrl + bracket{left,right}
+      bspc desktop -m {prev,next};
 
 # focus the older or newer node in the focus history
 alt + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+      bspc wm -h off; \
+      bspc node {older,newer} -f; \
+      bspc wm -h on
 
 alt + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
@@ -83,10 +92,6 @@ alt + {_,shift + }{1-9,0}
 # # preselect the direction
 # super + ctrl + {h,j,k,l}
 # 	bspc node -p {west,south,north,east}
-
-# # preselect the ratio
-# super + ctrl + {1-9}
-# 	bspc node -o 0.{1-9}
 
 # # cancel the preselection for the focused node
 # super + ctrl + space
@@ -100,14 +105,9 @@ alt + {_,shift + }{1-9,0}
 # move/resize
 #
 super + {Left,Down,Up,Right}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
+        bspc node -v {-20 0,0 20,0 -20,20 0}
 super + shift + {Left,Down,Up,Right}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-# # move a floating window
-# super + {Left,Down,Up,Right}
-# bspc node -v {-20 0,0 20,0 -20,20 0}
 
 #
 # application

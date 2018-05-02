@@ -39,6 +39,7 @@ bspc rule -a Thunar desktop='^5'
 bspc rule -a Thunderbird desktop='^6'
 bspc rule -a Slack desktop='^7'
 bspc rule -a Eom desktop='^8'
+bspc rule -a Franz desktop='^8'
 bspc rule -a 'Google Play Music Desktop Player' desktop='^8'
 bspc rule -a Keepassxc desktop='^9'
 bspc rule -a VirtualBox desktop='^10'
@@ -56,4 +57,3 @@ bspc rule -a Screenkey manage=off
 /home/kizkoh/.local/bin/mpdcover &
 /usr/bin/conky -c ~/.conkyrc &
 /usr/bin/mpd
-https://03fa60003bbf4a31a999ea8f03879084.vfs.cloud9.us-east-1.amazonaws.com/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
