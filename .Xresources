@@ -8,5 +8,5 @@ Xcursor.size: 32
 
 xterm*reverseVideo: off
 
-urxvt.url-launcher: /usr/bin/firefox -new-tab
+urxvt.url-launcher: /usr/bin/firefox-bin -new-tab
 urxvt.matcher.button: 1
