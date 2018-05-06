@@ -30,7 +30,7 @@ fi
 
 # .config
 mkdir -pv ${HOME}/.config
-for file in $(find .config -mindepth 1 -maxdepth 1 -type d)
+for file in $(find .config -mindepth 1 -maxdepth 1)
 do
     ln -sfv $(readlink -f $file) ${HOME}/.config/
 done
