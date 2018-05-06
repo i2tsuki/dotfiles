@@ -22,15 +22,6 @@ case "$group" in
 			power)
 				# /etc/acpi/actions/powerbtn.sh
 				;;
-
-			# if your laptop doesnt turn on/off the display via hardware
-			# switch and instead just generates an acpi event, you can force
-			# X to turn off the display via dpms.  note you will have to run
-			# 'xhost +local:0' so root can access the X DISPLAY.
-			#lid)
-			#	xset dpms force off
-			#	;;
-
 			lid)
 				case "$id" in
 					close)
