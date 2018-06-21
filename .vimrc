@@ -22,3 +22,8 @@ map <C-p> :cp<CR>
 syntax on
 colorscheme koehler
 highlight Normal ctermbg=none
+
+set encoding=utf8
+set fenc=utf-8
+
+set clipboard=unnamedplus
