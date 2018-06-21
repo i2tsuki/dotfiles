@@ -133,25 +133,25 @@ wrapping-scroll = false
 
 label-focused = %icon%
 label-focused-foreground = #FFFFFF
-label-focused-padding = 3
+label-focused-padding = 2
 label-focused-underline = #FF0000
 
 label-occupied = %icon%
 label-occupied-foreground = #FFFFFF
-label-occupied-padding = 3
+label-occupied-padding = 2
 
 label-empty = %icon%
-label-empty-padding = 3
+label-empty-padding = 2
 label-empty-foreground = #747474
 
 label-urgent = 
-label-urgent-padding = 3
+label-urgent-padding = 2
 label-urgent-foreground = #FA8007
 label-urgent-background = #BBBBBB
 label-urgent-overline = #FF0000
 
 label-separator =
-label-separator-padding = 3
+label-separator-padding = 2
 label-separator-foreground = #00000000
 
 ws-icon-0 = www;
@@ -216,13 +216,13 @@ type = internal/cpu
 
 interval = 3
 
-format =  <label> <ramp-coreload>
+format = " <label><ramp-coreload>"
 format-foreground = #66CC99
 format-padding = 1
 overline-size = 2
 underline-size = 2
 
-label = %percentage% %
+label = "%percentage%%"
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -238,13 +238,13 @@ type = internal/memory
 
 interval = 3
 
-format =  <label> <bar-used>
+format = " <label><bar-used>"
 format-foreground = #CB66CC
 format-padding = 1
 overline-size = 2
 underline-size = 2
 
-label = %gb_used%
+label = "%gb_used%"
 
 bar-used-indicator =
 bar-used-width = 7
@@ -263,11 +263,12 @@ bar-used-empty-foreground = #444444
 [module/essid]
 type = custom/script
 interval = 30
-format = "<label> "
+format = "<label>"
 format-prefix = " "
 format-prefix-foreground = #FFFFFF
 format-padding = 1
-exec = echo "$(iw dev wlp4s0 link | grep -E 'SSID: ([a-zA-Z0-9_-]+)' --color=none | sed -e 's/.*SSID: \(.*\)/\1/') $(iw dev wlp4s0 link | grep -E '([0-9.]+) MBit/s' -o)"
+# exec = echo "$(iw dev wlp4s0 link | grep -E 'SSID: ([a-zA-Z0-9_-]+)' --color=none | sed -e 's/.*SSID: \(.*\)/\1/') $(iw dev wlp4s0 link | grep -E '([0-9.]+) MBit/s' -o)"
+exec = echo "$(iw dev wlp4s0 link | grep -E 'SSID: ([a-zA-Z0-9_-]+)' --color=none | sed -e 's/.*SSID: \(.*\)/\1/')"
 exec-if = ping -c 1 gentoo.org
 
 [module/volume]
@@ -298,7 +299,7 @@ ramp-headphones-1 = 
 type = internal/backlight
 card = intel_backlight
 
-format = <ramp> <label>
+format = "<ramp><label>"
 format-padding = 1
 
 label = %percentage%%
@@ -312,7 +313,7 @@ ramp-4 = 
 [module/battery]
 type = internal/battery
 
-full-at = 99
+full-at = 95
 
 battery = BAT0
 adapter = ADP1
@@ -334,7 +335,7 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
-bar-capacity-width = 10
+bar-capacity-width = 7
 
 animation-charging-0 = 
 animation-charging-1 = 
@@ -352,12 +353,12 @@ interval = 1.0
 date = %a, %d %b %Y
 time = %H:%M:%S
 
-format = "  <label>"
+format = " <label>"
 format-foreground = #FFFFFFFF
 format-padding = 1
 
 label = %date% %time%
-label-font = 3
+label-font = 0
 label-foreground = #FFFFFF
 
 [module/mpd]
