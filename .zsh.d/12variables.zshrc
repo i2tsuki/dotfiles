@@ -14,6 +14,8 @@ PATH=${PATH}:~/.cargo/bin
 PATH=${PATH}:~/node_modules/.bin
 PATH=${PATH}:~/.rbenv/bin
 PATH=${PATH}:~/Android/Sdk/platform-tools
+PATH=${PATH}:~/.google-cloud-sdk/bin
+
 # for OSX (homebrew)
 if [ "$(uname)" = "Darwin" ] ; then
     PATH=/usr/local/bin:${PATH}
