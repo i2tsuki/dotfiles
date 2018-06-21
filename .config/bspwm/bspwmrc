@@ -53,7 +53,7 @@ bspc rule -a Screenkey manage=off
 /usr/lib64/xfce4/notifyd/xfce4-notifyd &
 
 /usr/bin/dex -a -s "/home/kizkoh/.config/autostart" &
-/home/kizkoh/.local/bin/dropbox &
+/opt/bin/dropbox &
 /home/kizkoh/.local/bin/mpdcover &
 /usr/bin/conky -c ~/.conkyrc &
 /usr/bin/mpd
