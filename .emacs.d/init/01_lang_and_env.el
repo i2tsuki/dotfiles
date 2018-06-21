@@ -24,6 +24,8 @@
  	(concat (getenv "HOME") "/.cargo/bin" ":" (getenv "PATH")))
 (setenv "PATH"
  	(concat (getenv "HOME") "/.go/bin" ":" (getenv "PATH")))
+(setenv "PATH"
+ 	(concat (getenv "HOME") "/node_modules/.bin" ":" (getenv "PATH")))
 
 (setenv "LANG" "en_US.utf-8")
 (setq browse-url-browser-function 'browse-url-generic)
@@ -45,4 +47,5 @@
 (add-to-list 'exec-path (concat (getenv "HOME") "/.cabal/bin"))
 (add-to-list 'exec-path (concat (getenv "HOME") "/.cargo/bin"))
 (add-to-list 'exec-path (concat (getenv "HOME") "/.go/bin"))
+(add-to-list 'exec-path (concat (getenv "HOME") "/node_modules/.bin"))
 (add-to-list 'exec-path "/usr/local/bin")
