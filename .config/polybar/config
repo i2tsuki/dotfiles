@@ -133,25 +133,25 @@ wrapping-scroll = false
 
 label-focused = %icon%
 label-focused-foreground = #FFFFFF
-label-focused-padding = 2
+label-focused-padding = 1
 label-focused-underline = #FF0000
 
 label-occupied = %icon%
 label-occupied-foreground = #FFFFFF
-label-occupied-padding = 2
+label-occupied-padding = 1
 
 label-empty = %icon%
-label-empty-padding = 2
+label-empty-padding = 1
 label-empty-foreground = #747474
 
 label-urgent = 
-label-urgent-padding = 2
+label-urgent-padding = 1
 label-urgent-foreground = #FA8007
 label-urgent-background = #BBBBBB
 label-urgent-overline = #FF0000
 
 label-separator =
-label-separator-padding = 2
+label-separator-padding = 1
 label-separator-foreground = #00000000
 
 ws-icon-0 = www;
@@ -209,7 +209,7 @@ format-foreground = #FF
 format-padding = 4
 
 label = %title%
-label-maxlen = 29
+label-maxlen = 30
 
 [module/cpu]
 type = internal/cpu
