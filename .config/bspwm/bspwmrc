@@ -55,6 +55,4 @@ bspc rule -a Screenkey manage=off
 /usr/bin/dex -a -s "/home/kizkoh/.config/autostart" &
 /usr/bin/dunst &
 /opt/bin/dropbox &
-/home/kizkoh/.local/bin/mpdcover &
-/usr/bin/conky -c ~/.conkyrc &
-/usr/bin/mpd
+/usr/bin/conky -c ~/.conkyrc
