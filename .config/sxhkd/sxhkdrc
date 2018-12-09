@@ -36,8 +36,11 @@ alt + y
 #
 # state/flags
 #
-alt + {t,shift +s,shift + t,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+alt + {t,shift +s,f}
+	bspc node -t {tiled,pseudo_tiled,fullscreen}
+
+alt + shift + t
+        bspc node -t floating
 
 # # set the node flags
 # super + ctrl + {m,x,y,z}
