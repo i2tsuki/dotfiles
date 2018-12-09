@@ -36,3 +36,6 @@ export SKIM_DEFAULT_OPTIONS="--reverse"
 export WINEARCH="win32"
 export WINEPREFIX="${HOME}/.wine"
 
+# firefox
+export MOZ_ACCELERATED=1
+export MOZ_WEBRENDER=1
