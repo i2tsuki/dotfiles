@@ -31,3 +31,8 @@ HISTSIZE=30000
 SAVEHIST=30000
 
 export SKIM_DEFAULT_OPTIONS="--reverse"
+
+# wine
+export WINEARCH="win32"
+export WINEPREFIX="${HOME}/.wine"
+
