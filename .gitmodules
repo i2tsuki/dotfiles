@@ -1,9 +1,3 @@
-[submodule ".vimperator/vimperator-colors"]
-	path = .vimperator/vimperator-colors
-	url = https://github.com/vimpr/vimperator-colors
-[submodule ".vimperator/vimperator-plugins"]
-	path = .vimperator/vimperator-plugins
-	url = https://github.com/vimpr/vimperator-plugins
 [submodule ".emacs.d/el-get"]
 	path = .emacs.d/el-get
 	url = https://github.com/dimitri/el-get/
