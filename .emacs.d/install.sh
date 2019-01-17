@@ -142,6 +142,7 @@ PKGS=(
     "company-ghc"
     "php-mode"
     "prettier-js"
+    "typescript-mode"
     "rust-mode"
     "flycheck-rust"
     "rust-racer"
