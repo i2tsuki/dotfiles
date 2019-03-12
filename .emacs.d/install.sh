@@ -132,7 +132,6 @@ done
 PKGS=(
     "company-irony"
     "irony-mode"
-    "elpy"
     "go-mode"
     "go-autocomplete"
     "go-eldoc"
@@ -143,9 +142,11 @@ PKGS=(
     "php-mode"
     "prettier-js"
     "typescript-mode"
+    "tide"
     "rust-mode"
     "flycheck-rust"
     "rust-racer"
+    "terraform-mode"
 )
 for i in ${PKGS[*]}
 do

@@ -168,38 +168,7 @@
 ;; Ruby
 (setq ruby-insert-encoding-magic-comment nil)
 
-;; Python (elpy)
-(require 'elpy)
-(elpy-enable)
-(defvar elpy-rpc-backend "jedi")
-
-(defun my-short-buffer-file-coding-system (&optional default-coding)
-  (let ((coding-str (format "%S" buffer-file-coding-system)))
-    (cond ((string-match "shift-jis" coding-str) 'shift_jis)
-	  ((string-match "euc-jp" coding-str) 'euc-jp)
-	  ((string-match "utf-8" coding-str) 'utf-8)
-	  (t (or default-coding 'utf-8)))))
-
-(defun my-insert-file-local-coding ()
-  "Insert `coding:' to head of code"
-  (interactive)
-  (save-excursion
-    (forward-line 2) (end-of-line)
-    (let ((limit (point)))
-      (goto-char (point-min))
-      (unless (search-forward "coding:" limit t) ; 2行目以内に `coding:'がない
-        (goto-char (point-min))
-        ;; If first line start with '#!', write line to 2th line
-        (when (and (< (+ 2 (point-min)) (point-max))
-                   (string= (buffer-substring (point-min) (+ 2 (point-min))) "#!"))
-	  ;; If first line ends with '\n'
-          (unless (search-forward "\n" nil t)
-            (insert "\n")))
-        (let ((st (point)))
-          (insert (format "-*- coding: %S -*-\n" (my-short-buffer-file-coding-system)))
-          (comment-region st (point)))))))
-
-(add-hook 'elpy-mode-hook 'my-insert-file-local-coding)
+;; Python
 
 ;;; Rust-mode
 (require 'rust-mode)
