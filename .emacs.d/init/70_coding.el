@@ -210,3 +210,8 @@
 (define-key rust-mode-map (kbd "C-c C-f") #'rust-format-buffer)
 (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
 (defvar company-tooltip-align-annotations t)
+
+;;; Terraform-mode
+(require 'terraform-mode)
+(custom-set-variables
+  '(terraform-indent-level 2))
