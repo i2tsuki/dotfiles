@@ -60,3 +60,5 @@ bspc rule -a Screenkey manage=off
 /usr/bin/dunst &
 /opt/bin/dropbox &
 /usr/bin/conky -c ~/.conkyrc
+/usr/bin/xset s 300 5
+/usr/bin/xss-lock -n /usr/bin/xtrlock xtrlock
