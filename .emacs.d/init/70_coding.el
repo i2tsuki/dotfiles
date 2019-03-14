@@ -32,7 +32,7 @@
 ;; (eval-after-load 'flycheck
 ;;   '(custom-set-variables
 ;;     '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))
-(setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
+(setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc python-pycompile))
 
 ;;; Agda-mode
 ;; (load-library "agda2")
@@ -169,6 +169,23 @@
 (setq ruby-insert-encoding-magic-comment nil)
 
 ;; Python
+(flycheck-define-checker
+    python-mypy ""
+    :command ("mypy"
+              "--ignore-missing-imports"
+              source-original)
+    :error-patterns
+    ((error line-start (file-name) ":" line ": error:" (message) line-end))
+    :modes python-mode)
+
+(add-to-list 'flycheck-checkers 'python-mypy t)
+(flycheck-add-next-checker 'python-pylint 'python-mypy t)
+
+(add-to-list 'company-backends 'company-jedi)
+(add-to-list 'company-backends '(company-jedi company-files))
+
+(require 'blacken)
+(add-hook 'python-mode 'blacken-mode)
 
 ;;; Rust-mode
 (require 'rust-mode)

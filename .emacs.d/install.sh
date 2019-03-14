@@ -132,6 +132,7 @@ done
 PKGS=(
     "company-irony"
     "irony-mode"
+    "company-jedi"
     "go-mode"
     "go-autocomplete"
     "go-eldoc"
