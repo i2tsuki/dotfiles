@@ -107,10 +107,18 @@ alt + {_,shift + }{1-9,0}
 #
 # move/resize
 #
+super + y
+      xdotool getactivewindow windowmove 0 0
+
+super + u
+      xdotool getactivewindow windowmove 0 32
+
 super + {Left,Down,Up,Right}
-        bspc node -v {-20 0,0 20,0 -20,20 0}
+        bspc node -v {-32 0,0 32,0 -32,32 0}
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -z {left -32 0,bottom 0 32,top 0 -32,right 32 0}
 super + shift + {Left,Down,Up,Right}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+	bspc node -z {right -32 0,top 0 32,bottom 0 -32,left 32 0}
 
 #
 # application
