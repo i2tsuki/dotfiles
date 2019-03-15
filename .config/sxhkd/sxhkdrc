@@ -50,6 +50,9 @@ alt + shift + t
 alt + {a,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
+alt + shift + b
+	bspc node -B
+
 #
 # move node
 #
