@@ -35,6 +35,7 @@ export SKIM_DEFAULT_OPTIONS="--reverse"
 # wine
 export WINEARCH="win32"
 export WINEPREFIX="${HOME}/.wine"
+export WINEDEBUG="fps"
 
 # firefox
 export MOZ_ACCELERATED=1
