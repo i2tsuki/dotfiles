@@ -46,9 +46,6 @@ alt + shift + t
 # super + ctrl + {m,x,y,z}
 # 	bspc node -g {marked,locked,sticky,private}
 
-alt + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
-
 # focus the node for the given path jump
 alt + {a,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
