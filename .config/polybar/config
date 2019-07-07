@@ -315,7 +315,7 @@ type = internal/battery
 
 full-at = 95
 
-battery = BAT0
+battery = BAT1
 adapter = ADP1
 
 poll-interval = 60
