@@ -55,7 +55,7 @@ bspc rule -a Screenkey manage=off
 /usr/bin/compton &
 /usr/bin/nitrogen --restore &
 
-/usr/bin/dex -a -s "/home/kizkoh/.config/autostart" &
+/usr/bin/dex -a -s "/home/i2tsuki/.config/autostart" &
 /usr/bin/dunst &
 /opt/bin/dropbox &
 /usr/bin/conky -c ~/.conkyrc
