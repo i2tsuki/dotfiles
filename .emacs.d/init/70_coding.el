@@ -185,7 +185,7 @@
 (add-to-list 'company-backends '(company-jedi company-files))
 
 (require 'blacken)
-(add-hook 'python-mode 'blacken-mode)
+(add-hook 'python-mode-hook 'blacken-mode)
 
 ;;; Rust-mode
 (require 'rust-mode)
