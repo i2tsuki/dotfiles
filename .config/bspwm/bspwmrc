@@ -54,7 +54,6 @@ bspc rule -a Screenkey manage=off
 /usr/bin/polybar top &
 /usr/bin/compton &
 /usr/bin/nitrogen --restore &
-/usr/lib64/xfce4/notifyd/xfce4-notifyd &
 
 /usr/bin/dex -a -s "/home/kizkoh/.config/autostart" &
 /usr/bin/dunst &
