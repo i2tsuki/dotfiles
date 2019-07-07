@@ -42,7 +42,7 @@ bspc rule -a Slack desktop='^7'
 bspc rule -a Eom desktop='^8'
 bspc rule -a Franz desktop='^8'
 bspc rule -a 'Google Play Music Desktop Player' desktop='^8'
-bspc rule -a Keepassxc desktop='^9'
+bspc rule -a keepassxc desktop='^9'
 bspc rule -a VirtualBox desktop='^10'
 bspc rule -a Chromium desktop='^10'
 bspc rule -a Qemu-system-x86_64 desktop='^10' state=floating rectangle=1920x1200+0+24
