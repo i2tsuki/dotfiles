@@ -257,7 +257,7 @@ bar-used-empty-foreground = #444444
 
 # [module/network]
 # type = internal/network
-# interface = wlp4s0
+# interface = wlp2s0
 # unknown-as-up = true
 
 [module/essid]
@@ -267,8 +267,8 @@ format = "<label>"
 format-prefix = " "
 format-prefix-foreground = #FFFFFF
 format-padding = 1
-# exec = echo "$(iw dev wlp4s0 link | grep -E 'SSID: ([a-zA-Z0-9_-]+)' --color=none | sed -e 's/.*SSID: \(.*\)/\1/') $(iw dev wlp4s0 link | grep -E '([0-9.]+) MBit/s' -o)"
-exec = echo "$(iw dev wlp4s0 link | grep -E 'SSID: ([a-zA-Z0-9_-]+)' --color=none | sed -e 's/.*SSID: \(.*\)/\1/')"
+# exec = echo "$(iw dev wlp2s0 link | grep -E 'SSID: ([a-zA-Z0-9_-]+)' --color=none | sed -e 's/.*SSID: \(.*\)/\1/') $(iw dev wlp2s0 link | grep -E '([0-9.]+) MBit/s' -o)"
+exec = echo "$(iw dev wlp2s0 link | grep -E 'SSID: ([a-zA-Z0-9_-]+)' --color=none | sed -e 's/.*SSID: \(.*\)/\1/')"
 exec-if = ping -c 1 gentoo.org
 
 [module/volume]
