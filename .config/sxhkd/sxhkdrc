@@ -74,7 +74,7 @@ super + bracket{left,right}
 
 super + shift + bracket{left,right}
       DESK=$(bspc query -D -d focused); \
-      bspc desktop ${DESK} -d {prev,next}; \
+      bspc desktop ${DESK} -s {prev,next}; \
       bspc desktop -f ${DESK}
 
 super + ctrl + bracket{left,right}
