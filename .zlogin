@@ -19,14 +19,11 @@ export LIBVA_DRIVER_NAME="i965"
 export LIBVA_DRIVERS_PATH=/usr/lib64/va/drivers
 
 # export VDPAU_DRIVER=va_gl
-# eval $(gnome-keyring-daemon -sd)
-
 export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
 export QT4_IM_MODULE=${QT_IM_MODULE}
 
-# eval "$(gpg-agent)"
 [ -z "${SSH_AGENT_PID}" -a -z "${SSH_AUTH_SOCK}" ] && eval "$(ssh-agent)"
 
 export GDK_SCALE=1.2
