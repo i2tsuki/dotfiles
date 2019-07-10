@@ -50,13 +50,19 @@ bspc rule -a Spicy desktop='^10' state=floating rectangle=1920x1248+0+24
 
 bspc rule -a Screenkey manage=off
 
-/usr/bin/polybar top &
-/usr/bin/compton &
-/usr/bin/nitrogen --restore &
-
-/usr/bin/dex -a -s "/home/i2tsuki/.config/autostart" &
+/usr/bin/xrdb ~/.Xresources
+/usr/bin/sxhkd &
 /usr/bin/dunst &
-/opt/bin/dropbox &
-/usr/bin/conky -c ~/.conkyrc
+/usr/bin/dex -a -s "/home/i2tsuki/.config/autostart" &
+/usr/bin/nm-applet &
+/usr/bin/gnome-flashback &
+sleep 0.1s
+/usr/bin/polybar top &
+/usr/bin/nitrogen --restore
+/usr/bin/conky &
+/usr/bin/compton &
+/usr/bin/xsetroot -cursor_name left_ptr
 /usr/bin/xset s 300 5
 /usr/bin/xss-lock -n /usr/bin/xtrlock xtrlock
+sleep 1s
+/usr/bin/nitrogen --restore
