@@ -31,12 +31,6 @@ export QT4_IM_MODULE=${QT_IM_MODULE}
 
 export GDK_SCALE=1.2
 
-export XKB_DEFAULT_OPTIONS=ctrl:nocaps,
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
-# export GDK_BACKEND=wayland
-# export QT_QPA_PLATFORM=wayland-egl
 export QT_QPA_PLATFORMTHEME="qt5ct"
-# export QT_WAYLAND_FORCE_DPI=120
-# export SDL_VIDEODRIVER=wayland
-# export CLUTTER_PAINT=disable-clipped-redraws:disable-culling
 true
