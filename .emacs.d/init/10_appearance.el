@@ -6,7 +6,7 @@
 		    (create-fontset-from-ascii-font "Inconsolata-15:weight=Medium" nil "Inconsolata")
 		    (set-fontset-font "fontset-Inconsolata"
 				      'unicode
-				      (font-spec :family "Ricty Diminished")
+				      (font-spec :family "Ricty")
 				      nil
 				      'append)
 		    (set-fontset-font "fontset-Inconsolata"
