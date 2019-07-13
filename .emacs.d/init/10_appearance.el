@@ -17,7 +17,7 @@
 		    (add-to-list 'default-frame-alist '(font . "fontset-Inconsolata"))))
 ;; Fonts decolation
 (defvar w32-enable-synthesized-fonts t)
-(setq-default line-spacing 0.16)
+(setq-default line-spacing 0.10)
 
 ;; Color Theme
 (if window-system (progn
