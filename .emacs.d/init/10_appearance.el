@@ -33,6 +33,7 @@
 ))
 ;; (load-theme 'github t t)
 (load-theme 'challenger-deep t t)
+(set-frame-parameter nil 'alpha 97)
 
 ;; Stripe buffer
 (require 'stripe-buffer)

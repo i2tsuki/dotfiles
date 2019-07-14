@@ -3,7 +3,6 @@
 ;;; Code:
 (cd "~/")
 (setq visible-bell nil)
-(add-to-list 'default-frame-alist '(alpha . 70))
 (column-number-mode 1)
 (tool-bar-mode -1)
 (menu-bar-mode 0)
@@ -39,4 +38,3 @@
 
 ;; Reduction 'yes/no' to 'y/n'
 (fset 'yes-or-no-p 'y-or-n-p)
-
