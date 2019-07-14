@@ -3,7 +3,7 @@
 
     follow = keyboard
 
-    geometry = "576x18-7+24"
+    geometry = "820x18-7+24"
 
     indicate_hidden = yes
 
