@@ -1,6 +1,4 @@
 #!/bin/sh
-alias mkr="${HOME}/.go/bin/mkr"
-
 export PATH=${PATH}:/opt/bin:${HOME}/.cabal/bin:{HOME}/.cask/bin
 export PATH=${HOME}/.local/bin:${HOME}/.cargo/bin:${PATH}
 
