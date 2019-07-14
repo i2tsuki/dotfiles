@@ -14,12 +14,12 @@ screenchange-reload = true
 bottom = false
 monitor = eDP-1
 width = 100%
-height = 24
-dpi = 96
+height = 40
+dpi = 168
 
 modules-left = bspwm title
-modules-center = cpu memory
-modules-right = essid volume backlight battery date
+modules-center = cpu memory essid
+modules-right = volume backlight battery date
 
 background = #00000000
 
@@ -29,7 +29,7 @@ underline-color = #FF0000
 
 border-bottom-size = 0
 
-spacing = 2
+spacing = 1
 padding-left = 0
 padding-right = 0
 module-margin-left = 0
@@ -41,10 +41,11 @@ font-2 = Font Awesome 5 Free:pixelsize=15;3
 font-3 = Font Awesome 5 Free Solid:pixelsize=15;3
 font-4 = Font Awesome 5 Brands:pixelsize=15;3
 font-5 = Noto Color Emoji:pixelsize=15;3
+font-6 = GNU Unifont:style=Sans-Serif:pixelsize=15;3
 
 tray-background = #000000
 tray-detached = false
-tray-maxsize = 20
+tray-maxsize = 40
 tray-offset-x = 0
 tray-offset-y = -2
 tray-position = right
@@ -64,7 +65,7 @@ cursor-scroll = ns-resize
 separator = " "
 radius = 4.0
 
-[bar/top-DP-1]
+[bar/DP1]
 bottom = false
 monitor = DP-1
 width = 100%
@@ -95,6 +96,7 @@ font-2 = Font Awesome 5 Free:pixelsize=15;3
 font-3 = Font Awesome 5 Free Solid:pixelsize=15;3
 font-4 = Font Awesome 5 Brands:pixelsize=15;3
 font-5 = Noto Color Emoji:pixelsize=15;3
+font-6 = GNU Unifont:style=Sans-Serif:pixelsize=15;3
 
 tray-background = #000000
 tray-detached = false
@@ -206,10 +208,10 @@ icon-default = 
 type = internal/xwindow
 
 format-foreground = #FF
-format-padding = 4
+format-padding = 0
 
 label = %title%
-label-maxlen = 30
+label-maxlen = 24
 
 [module/cpu]
 type = internal/cpu
@@ -313,7 +315,7 @@ ramp-4 = 
 [module/battery]
 type = internal/battery
 
-full-at = 95
+full-at = 80
 
 battery = BAT1
 adapter = ADP1
