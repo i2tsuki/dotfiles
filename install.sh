@@ -39,6 +39,6 @@ done
 if [ -d ./secrets ] ; then
     for file in $(find ./secrets -maxdepth 1 -type f | egrep -v ${EXCLUDES})
     do
-	ln -sfv $(readlink -f $file) ${HOME}/
+        ln -sfv $(readlink -f $file) ${HOME}/
     done
 fi
