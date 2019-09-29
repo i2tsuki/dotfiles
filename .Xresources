@@ -1,7 +1,7 @@
 Xcursor.theme: gentoo-silver
 Xcursor.size: 48
 
-Xft.dpi:        168
+Xft.dpi:        96
 Xft.antialias:  true
 Xft.rgba:       rgb
 Xft.hinting:    true
