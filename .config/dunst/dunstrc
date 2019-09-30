@@ -3,6 +3,9 @@
 
     follow = keyboard
 
+    frame_width = 2
+    frame_color = "#4d679a"
+
     geometry = "820x18-7+24"
 
     indicate_hidden = yes
@@ -48,7 +51,7 @@
 
     ### Icons ###
     icon_position = left
-    icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/hicolor/16x16/apps/
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/hicolor/16x16/apps/:/usr/share/icons/matefaenza/status/32/
 
     ### History ###
     sticky_history = yes
@@ -62,17 +65,11 @@
     class = Dunst
     startup_notification = true
 
-[experimental]
-
-[frame]
-    width = 2
-    color = "#4d679a"
 
 [shortcuts]
     close = mod4+i
     close_all = mod4+p
     history = mod4+o
-    context = mod4+[
 
 [urgency_low]
     background = "#222222"
