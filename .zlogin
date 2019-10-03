@@ -1,5 +1,5 @@
 #!/bin/sh
-export PATH=${PATH}:/opt/bin:${HOME}/.cabal/bin:{HOME}/.cask/bin
+export PATH=${PATH}:/opt/bin
 export PATH=${HOME}/.local/bin:${HOME}/.cargo/bin:${PATH}
 
 export XDG_DATA_HOME=$HOME/.cache
