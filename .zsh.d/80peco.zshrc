@@ -6,7 +6,7 @@ function skim-execute-history()
     item=$(builtin history -n -r 1 | sk)
 
     if [[ -z "$item" ]]; then
-	return 1
+        return 1
     fi
 
     BUFFER="$item"
@@ -21,7 +21,7 @@ function skim-put-history()
     item=$(builtin history -n -r 1 | sk)
 
     if [[ -z "$item" ]]; then
-    	return 1
+        return 1
     fi
 
     BUFFER="$item"
