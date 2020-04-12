@@ -2,8 +2,9 @@
 
 ;;; Code:
 (define-key global-map [?¥] [?\\])
-(global-set-key "\C-x;" 'comment-region)
-(global-set-key "\C-x:" 'uncomment-region)
+(global-set-key (kbd "C-;") 'comment-line)
+(global-set-key (kbd "M-:") 'uncomment-region)
+(global-set-key (kbd "M-;") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-x C-k") 'kill-buffer)
 (keyboard-translate ?\C-h ?\C-?)
 (global-set-key "\C-h" nil)
