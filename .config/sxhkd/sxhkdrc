@@ -66,7 +66,7 @@ alt + ctrl + bracket{left,right}
 # move desktop
 #
 super + bracket{left,right}
-      bspc monitor -f {prev,next}
+      bspc desktop -f {prev,next}
 
 super + shift + bracket{left,right}
       DESK=$(bspc query -D -d focused); \
