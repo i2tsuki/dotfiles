@@ -54,7 +54,7 @@ alt + shift + b
 # move node
 #
 alt + bracket{left,right}
-      bspc desktop -f {prev,next}
+      bspc node -f {prev,next}
 
 alt + shift + bracket{left,right}
       bspc node -d {prev,next}
