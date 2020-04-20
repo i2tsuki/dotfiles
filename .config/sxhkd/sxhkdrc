@@ -122,6 +122,27 @@ alt + {F5,F6}
     BAR="$(seq -s '─' 0 $((${BRIGHTNESS} / 5)) | sed 's/[0-9]//g')" ; \
     dunstify --icon='preferences-desktop-display' -u low -t 3000 -r 32768 "🔆 $(printf "%.0f%% ${BAR}" ${BRIGHTNESS})"
 
+alt + F4
+    VOLUME="$(amixer -D pulse sset Master 5%+ | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1)"; \
+    BAR="$(seq -s '─' 0 $((${VOLUME} / 5)) | sed 's/[0-9]//g')" ; \
+    dunstify --icon='audio-volume-high' -u low -t 3000 -r 32769  "$(printf "%.0f%% ${BAR}" ${VOLUME})"
+
+alt + F3
+    VOLUME="$(amixer -D pulse sset Master 5%- | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1)"; \
+    BAR="$(seq -s '─' 0 $((${VOLUME} / 5)) | sed 's/[0-9]//g')" ; \
+    dunstify --icon='audio-volume-low' -u low -t 3000 -r 32769 "$(printf "%.0f%% ${BAR}" ${VOLUME})"
+
+alt + F2
+    VOLUME="$(amixer -D pulse sset Master on | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1)"; \
+    BAR="$(seq -s '─' 0 $((${VOLUME} / 5)) | sed 's/[0-9]//g')" ; \
+    dunstify --icon='audio-volume-medium' -u low -t 3000 -r 32769 "$(printf "%.0f%% ${BAR}" ${VOLUME})"
+
+alt + F1
+    pacmd set-sink-mute alsa_output.pci-0000_00_1f.3.analog-stereo; \
+    VOLUME="$(amixer -D pulse sset Master off | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1)"; \
+    BAR="$(seq -s '─' 0 $((${VOLUME} / 5)) | sed 's/[0-9]//g')" ; \
+    dunstify --icon='audio-volume-muted' -u low -t 3000 -r 32769 "$(printf "%.0f%% ${BAR}" ${VOLUME})"
+
 #
 # application
 #
