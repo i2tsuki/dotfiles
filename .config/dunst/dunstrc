@@ -51,7 +51,8 @@
 
     ### Icons ###
     icon_position = left
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/hicolor/16x16/apps/:/usr/share/icons/matefaenza/status/32/
+    icon_path = /usr/share/icons/gnome/256x256/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/hicolor/256x256/apps/:/usr/share/icons/matefaenza/status/96/:/usr/share/icons/matefaenza/apps/96/
+    max_icon_size = 128
 
     ### History ###
     sticky_history = yes
