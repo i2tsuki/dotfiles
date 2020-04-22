@@ -21,6 +21,8 @@ alias gcb="git-current-branch"
 alias grc="git rebase --continue"
 alias gp="git-pull"
 
+alias tg="tig status"
+
 # open
 if (which open > /dev/null) ; then
     alias vscode="open -a \"Visual Studio Code\""
