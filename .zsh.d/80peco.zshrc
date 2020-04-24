@@ -59,3 +59,15 @@ function skim-git-switch
 }
 zle -N skim-git-switch
 bindkey '^G^N' skim-git-switch
+
+function skim-git-branch-delete
+{
+    local branch="$(git branch --sort=-authordate | cut -b 3- | grep -v -- '->' | sk)"
+    if [ -z "${branch}" ] ; then
+        return 1
+    fi
+    git branch -d "${branch}"
+    zle accept-line
+}
+zle -N skim-git-branch-delete
+bindkey '^G^H' skim-git-branch-delete
