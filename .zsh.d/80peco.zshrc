@@ -47,3 +47,15 @@ function skim-z-search
 }
 zle -N skim-z-search
 bindkey '^X^F' skim-z-search
+
+function skim-git-switch
+{
+    local branch="$(git branch --sort=-authordate | cut -b 3- | grep -v -- '->' | sk)"
+    if [ -z "${branch}" ] ; then
+        return 1
+    fi
+    git checkout "${branch}"
+    zle accept-line
+}
+zle -N skim-git-switch
+bindkey '^G^N' skim-git-switch
