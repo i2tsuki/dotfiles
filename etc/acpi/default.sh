@@ -22,18 +22,6 @@ case "$group" in
 			power)
 				# /etc/acpi/actions/powerbtn.sh
 				;;
-			lid)
-				case "$id" in
-					close)
-						hibernate-ram
-						;;
-					open)
-						su kizkoh -c /usr/bin/xtrlock &
-						;;
-					*) uhd $*;;
-				esac
-				;;
-
 			volumeup)
 				$amixer 5dB+
 				;;
