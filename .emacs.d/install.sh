@@ -144,6 +144,7 @@ PKGS=(
     "prettier-js"
     "typescript-mode"
     "tide"
+    "web-mode"
     "rust-mode"
     "flycheck-rust"
     "rust-racer"
