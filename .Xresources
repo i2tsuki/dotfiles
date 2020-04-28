@@ -47,3 +47,5 @@ Xmessage*Command.borderColor: gray40
 Xmessage*Command.shapeStyle: Rectangle
 Xmessage*Command.background: gray80
 Xmessage*font: -*-clean-*-*-*-*-*-*-*-*-*-*-iso8859-2
+
+Emacs*UseXIM: false
