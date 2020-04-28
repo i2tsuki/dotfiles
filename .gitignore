@@ -1,5 +1,8 @@
 secrets/
 
+.config/gnome-session/saved-session
+.config/gtk-3.0/bookmarks
+
 .vimperator/info/
 
 .xmonad/xmonad.o
