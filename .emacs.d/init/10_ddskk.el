@@ -12,3 +12,7 @@
 
 ;; Configure for fyure
 (autoload 'fyure:start-fixing "fyure" "An interface to fix Japanese hyoki-yure." t)
+
+(require 'mozc)
+;; (setq mozc-candidate-style 'overlay)
+(setq default-input-method "japanese-mozc")
