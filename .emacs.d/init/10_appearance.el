@@ -31,9 +31,17 @@
   (set-face-foreground 'mode-line-inactive "gray30")
   (set-face-background 'mode-line-inactive "gray85")
 ))
-;; (load-theme 'github t t)
+(load-theme 'github t t)
 (load-theme 'challenger-deep t t)
 (set-frame-parameter nil 'alpha 97)
+(global-set-key "\C-xa"
+  (lambda () (interactive)
+    (set-frame-parameter nil 'alpha 85)
+    (set-face-attribute 'default (selected-frame) :height 150)))
+(global-set-key "\C-ca"
+  (lambda () (interactive)
+    (set-frame-parameter nil 'alpha 97)
+    (set-face-attribute 'default (selected-frame) :height 150)))
 
 ;; Stripe buffer
 (require 'stripe-buffer)
