@@ -8,7 +8,7 @@ export XDG_RUNTIME_DIR=/var/run/user/$(id -u)
 
 export ACRO_DISABLE_FONT_CONFIG=1
 
-export LANG='ja_JP.UTF-8'
+export LANG='en_US.UTF-8'
 export LC_CTYPE=${LANG}
 
 export GTK2_RC_FILES=${HOME}/.gtkrc-2.0
