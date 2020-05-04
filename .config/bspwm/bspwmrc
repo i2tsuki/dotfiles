@@ -61,14 +61,9 @@ pacmd unload-module module-suspend-on-idle
 /usr/bin/dex -a -s "/home/i2tsuki/.config/autostart" &
 /usr/bin/nm-applet &
 /usr/bin/gnome-flashback &
-sleep 0.1s
-/usr/bin/polybar top &
-/usr/bin/nitrogen --restore
 /usr/bin/conky &
 /usr/bin/compton &
 /usr/bin/xsetroot -cursor_name left_ptr
 /usr/bin/xset s 300 5
-/usr/bin/xss-lock -n /usr/bin/xtrlock xtrlock
-sleep 1s
-/usr/bin/nitrogen --restore
+/usr/bin/gnome-panel &
 /usr/bin/fcitx -d
