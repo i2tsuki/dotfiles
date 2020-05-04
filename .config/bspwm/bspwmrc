@@ -3,7 +3,8 @@
 bspc monitor -d www edit code terminal file mail slack media keepass vm
 
 bspc config border_width 2
-bspc config window_gap 7
+bspc config window_gap 2
+bspc config top_padding 48
 
 bspc config focus_follows_pointer true
 bspc config click_to_focus false
@@ -48,10 +49,13 @@ bspc rule -a Chromium desktop='^10'
 bspc rule -a Qemu-system-x86_64 desktop='^10' state=floating rectangle=1920x1200+0+24
 bspc rule -a Vncviewer desktop='^10' state=floating rectangle=1920x1200+0+24
 bspc rule -a Spicy desktop='^10' state=floating rectangle=1920x1248+0+24
-
 bspc rule -a Screenkey manage=off
 
+pacmd unload-module module-suspend-on-idle
+
 /usr/bin/xrdb ~/.Xresources
+/usr/bin/xrdb -merge ~/.Xresources.hidpi
+/usr/bin/setxkbmap -option ctrl:nocaps
 /usr/bin/sxhkd &
 /usr/bin/dunst &
 /usr/bin/dex -a -s "/home/i2tsuki/.config/autostart" &
@@ -67,3 +71,4 @@ sleep 0.1s
 /usr/bin/xss-lock -n /usr/bin/xtrlock xtrlock
 sleep 1s
 /usr/bin/nitrogen --restore
+/usr/bin/fcitx -d
