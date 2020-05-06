@@ -59,7 +59,7 @@ pacmd unload-module module-suspend-on-idle
 /usr/bin/setxkbmap -option ctrl:nocaps
 /usr/bin/sxhkd &
 /usr/bin/dunst &
-/usr/bin/dex -a -s "/home/i2tsuki/.config/autostart" &
+/usr/bin/dex -a -s ~/.config/autostart &
 /usr/bin/nm-applet &
 /usr/bin/gnome-flashback &
 /usr/bin/conky &
