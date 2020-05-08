@@ -16,16 +16,15 @@ export GTK2_RC_FILES=${HOME}/.gtkrc-2.0
 export LIBVA_DRIVER_NAME="i965"
 export LIBVA_DRIVERS_PATH=/usr/lib64/va/drivers
 
-# export VDPAU_DRIVER=va_gl
-export XMODIFIERS="@im=fcitx"
-export GTK_IM_MODULE="fcitx"
-export QT_IM_MODULE="fcitx"
-export QT4_IM_MODULE=${QT_IM_MODULE}
+export IM_MODULE="fcitx"
+export XMODIFIERS="@im=${IM_MODULE}"
+export GTK_IM_MODULE="${IM_MODULE}"
+export QT_IM_MODULE="${IM_MODULE}"
+export QT4_IM_MODULE="${IM_MODULE}"
 
 [ -z "${SSH_AGENT_PID}" -a -z "${SSH_AUTH_SOCK}" ] && eval "$(ssh-agent)"
 
-export GDK_SCALE=1.2
-
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_QPA_PLATFORMTHEME="qt5ct"
+
 true
