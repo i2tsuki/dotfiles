@@ -20,7 +20,7 @@ case "$group" in
 	button)
 		case "$action" in
 			power)
-				# /etc/acpi/actions/powerbtn.sh
+				/etc/acpi/actions/powerbtn.sh
 				;;
 			volumeup)
 				$amixer 5dB+
