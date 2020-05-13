@@ -2,12 +2,6 @@
 export PATH=${PATH}:/opt/bin
 export PATH=${HOME}/.local/bin:${HOME}/.cargo/bin:${PATH}
 
-export XDG_DATA_HOME=$HOME/.cache
-export XDG_CACHE_HOME=$HOME/.cache
-export XDG_RUNTIME_DIR=/var/run/user/$(id -u)
-
-export ACRO_DISABLE_FONT_CONFIG=1
-
 export LANG='en_US.UTF-8'
 export LC_CTYPE=${LANG}
 
