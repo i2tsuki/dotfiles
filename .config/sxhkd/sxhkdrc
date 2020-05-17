@@ -151,3 +151,9 @@ super + l
 
 super + shift + space
       /usr/bin/thunar ~/Downloads
+
+super + shift + s
+      switch-display > ~/.switch-display.log 2>&1
+
+super + shift + a
+      compton
