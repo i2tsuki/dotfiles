@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-[ -r ${HOME}/repo/github.com/rupa/z/z.sh ] && . ${HOME}/repo/github.com/rupa/z/z.sh
+[ -r ${HOME}/repo/rupa/z/z.sh ] && . ${HOME}/repo/rupa/z/z.sh
