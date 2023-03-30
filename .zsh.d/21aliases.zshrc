@@ -3,8 +3,8 @@
 alias p="popd"
 
 alias ls="ls --color=always"
-alias la="ls -la --color=always"
-alias ll="ls -la --color=always"
+alias la="ls -la"
+alias ll="ls -la"
 
 alias grep="grep --color=always"
 
