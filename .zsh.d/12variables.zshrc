@@ -4,7 +4,8 @@ if [ "$(uname)" = "Darwin" ] ; then
     PATH=${PATH}:/usr/local/bin
     PATH=${PATH}:~/Library/Python/3.11/bin
     PATH=${PATH}:/opt/X11/bin
-    PATH=/usr/local/opt/findutils/libexec/gnubin:${PATH}
+    PATH="/usr/local/opt/findutils/libexec/gnubin:${PATH}"
+    PATH="/opt/homebrew/opt/uutils-coreutils/libexec/uubin:${PATH}"
 fi
 
 PATH=${PATH}:~/.local/bin
