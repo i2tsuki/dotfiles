@@ -2,7 +2,7 @@
 if [ "$(uname)" = "Darwin" ] ; then
     PATH=/usr/local/opt/coreutils/libexec/gnubin:${PATH}
     PATH=${PATH}:/usr/local/bin
-    PATH=${PATH}:~/Library/Python/3.5/bin
+    PATH=${PATH}:~/Library/Python/3.11/bin
     PATH=${PATH}:/opt/X11/bin
     PATH=/usr/local/opt/findutils/libexec/gnubin:${PATH}
 fi
@@ -19,7 +19,7 @@ PATH=${PATH}:~/.google-cloud-sdk/bin
 # for OSX (homebrew)
 if [ "$(uname)" = "Darwin" ] ; then
     PATH=/usr/local/bin:${PATH}
-    PATH=${PATH}:~/Library/Python/3.6/bin
+    PATH=${PATH}:~/Library/Python/3.11/bin
 fi
 
 which rbenv > /dev/null && eval "$(rbenv init -)"
