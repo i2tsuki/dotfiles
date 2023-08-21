@@ -6,6 +6,8 @@ if [ "$(uname)" = "Darwin" ] ; then
     PATH=${PATH}:/opt/X11/bin
     PATH="/usr/local/opt/findutils/libexec/gnubin:${PATH}"
     PATH="/opt/homebrew/opt/uutils-coreutils/libexec/uubin:${PATH}"
+    PATH="/opt/homebrew/opt/openjdk@17/bin:{$PATH}"
+    export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
 fi
 
 PATH=${PATH}:~/.local/bin
