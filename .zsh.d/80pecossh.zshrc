@@ -17,4 +17,4 @@ with open(os.getenv("HOME") + "/.ssh/config") as f:
   zle clear-screen
 }
 zle -N skim-ssh
-bindkey '^X^L' skim-ssh
+bindkey '^X^K' skim-ssh
