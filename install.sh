@@ -2,7 +2,7 @@
 
 set -eu
 
-EXCLUDES="Makefile|LICENSE|clean.sh|install.sh|udev.rules|usr|etc|.config|.git|.gitignore|^.$"
+EXCLUDES="vscode|Makefile|LICENSE|clean.sh|install.sh|udev.rules|usr|etc|.config|.git|.gitignore|^.$"
 
 # public
 X11ONLY=""
@@ -41,4 +41,9 @@ if [ -d ./secrets ] ; then
     do
         ln -sfv $(readlink -f $file) ${HOME}/
     done
+fi
+
+# vscode
+if [ "$(uname)" = "Darwin" ] ; then
+    ln -sfn $(readlink -f ./vscode/user/settings.json) ${HOME}/Library/Application\ Support/Code/User/settings.json
 fi
