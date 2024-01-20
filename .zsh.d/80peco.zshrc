@@ -25,8 +25,7 @@ function skim-put-history()
     fi
 
     BUFFER="$item"
-    CURSOR=$#BUFFER
-    zle accept-line
+    CURSOR=$#BUFFER 
 }
 zle -N skim-put-history
 bindkey '^X^P' skim-put-history
