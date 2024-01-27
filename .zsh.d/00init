@@ -1,4 +1,4 @@
-## ToDo: find を使って綺麗に書き直す
+#!/bin/zsh
 for file in $(find ~/.zsh.d/ -type f -name '*.zshrc' | sort)
 do
     source $file
