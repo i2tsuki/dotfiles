@@ -8,6 +8,9 @@ if [ "$(uname)" = "Darwin" ] ; then
     PATH="/opt/homebrew/opt/uutils-coreutils/libexec/uubin:${PATH}"
     PATH="/opt/homebrew/opt/openjdk@17/bin:{$PATH}"
     export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
+
+    source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+    source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"    
 fi
 
 PATH=${PATH}:~/.local/bin
