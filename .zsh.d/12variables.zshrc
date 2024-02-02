@@ -33,8 +33,8 @@ which rbenv > /dev/null && eval "$(rbenv init -)"
 PROMPT="%(?.%{%F{magenta}%}.%{%F{red}%})%B%n%F{reset_color}@%(?.%{%F{magenta}%}.%{%F{red}%})%B%m%u%f:%F{green}%d%F{reset_color}%# "
 
 HISTFILE=~/.zsh_history
-HISTSIZE=30000
-SAVEHIST=30000
+HISTSIZE=100000
+SAVEHIST=100000
 
 export SKIM_DEFAULT_OPTIONS="--reverse"
 
