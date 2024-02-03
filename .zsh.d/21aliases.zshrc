@@ -17,6 +17,7 @@ alias ecc="emacsclient -nw"
 
 # git
 alias gck="git checkout"
+alias gsc="git switch -c"
 alias gcb="git-current-branch"
 alias grc="git rebase --continue"
 alias gp="git-pull"
